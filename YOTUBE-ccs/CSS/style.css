@@ -1,0 +1,134 @@
+
+html{
+  scroll-behavior:smooth  
+} 
+
+h1{
+    color: orangered;
+    background-color: black;
+}
+
+#parrafo-dos{
+    background-color: skyblue;
+}
+
+.text-20{
+    font-size: 20px;
+}
+
+.bg-steelblue{
+    background-color: steelblue;
+}
+
+.text-white{
+    color: white;
+}
+
+.media { /* Esto no va con el curso*/
+    color: green; /* Utilizamos un tono verde oscuro */
+    font-family: "Andale Mono", Courier, monospace; /* Utilizamos una fuente de tipo monoespaciada para simular el estilo de código */
+    text-shadow: 0 0 2px #2ecc71, 0 0 5px #2ecc71, 0 0 8px #2ecc71, 0 0 10px #2ecc71; /* Agregamos sombras al texto */
+
+}
+
+.hijos-directos >li{
+    background-color: thistle;
+}
+
+.hijos-descendientes b{
+    background-color: thistle;
+
+}
+
+.hermanos-general~li{
+    background-color: thistle;
+}
+
+.hermanos-adyacente+li{
+    background-color: thistle;
+}
+
+.selectores-atributos a[href]{
+
+    color: orangered;
+}
+
+.selectores-atributos a[target="_blank"]{
+
+    font-weight: bold;
+}
+
+.selectores-atributos a[href*="jonmircha"]{
+
+    font-size: 24px;
+}
+
+.selectores-atributos a[href^="http://"]{
+
+    text-decoration: none;
+
+}
+
+.selectores-atributos a[href$=".com/"]{
+    background-color: black;
+}
+
+.selectores-atributos a[class~="cursos"]{
+    background-color: blue;
+}
+
+.selectores-atributos a[class|="menu"]{
+    font-style:italic;
+}
+h3{
+    color: orangered;
+}
+
+.sub>u{
+    background-color: black;
+}
+
+*{
+    font-family: Helvetica;
+}
+
+.selector-universal *{
+
+    font-size: 24px;
+}
+
+.form-pseudoclases *:required{
+    border-color: yellow;
+}
+
+.form-pseudoclases *:valid{
+    border-color: green;
+}
+
+.form-pseudoclases *:invalid{
+    border-color: red;
+}
+
+.form-pseudoclases *:focus{
+    background-color: skyblue;
+}
+
+.form-pseudoclases *:disabled{
+    background-color: pink;
+}
+
+.form-pseudoclases *:visited{
+    color: olive;
+}
+
+.menu-pseudoclases a:hover{
+    color: orange;
+}
+
+.p-pseudoclases:hover{
+    font-size: 20px;
+}
+
+#parte1:target{
+    background-color: lightgreen;
+}

@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teoria CSS</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="icon" href="img/Icon_Manzana.jfif">
+    <link rel="apple-touch-icon" href="img/Icon_Manzana.jfif">
+</head>
+
+
+<body>
+
+
+
+    <h1>Aprendiendo CSS</h1>
+    <p><i>Cascading Style Sheets(CSS)</i></p>
+    <small>
+        <p>Significado:</p>
+        <p>Hoja de Estilos en Cascada</p>
+    </small>
+
+    <hr>
+
+    <h3>Temario</h3>
+    <ul>
+        <li><a href="Teoria_Css.html#parte1">Reglas CSS</a></li>
+        <li><a href="Teoria_Css.html#parte2">Llamar a otra archivo CSS</a></li>
+        <li><a href="Teoria_Css.html#parte3">Selectores Basicos</a></li>
+        <li><a href="Teoria_Css.html#parte4">Selectores-avanzados</a></li>
+    </ul>
+
+    <article id="parte1">
+
+        <h2 >Reglas CSS</h2>
+
+    <P> 1- El selector.
+        <br>
+        2- Bloque de declaraciones .
+        <br>
+        Ejemplo:
+
+        <pre>
+            {
+              atributo:valor;
+              atributo-de-mas-dos-palabras;otro=valor;
+            }
+        </pre>
+    </P>
+
+    <P> Darle color a los titulos.
+        <br>
+        Ejemplo:
+    </P>
+    
+
+    <code>
+        <pre>
+        h1{
+            color:Orangered;<-COLOR DE LETRA.
+            background-color:skyblue;<-COLOR DEL FONDO DE LA PALABRA.
+        }
+        </pre> 
+    </code>
+
+
+    </article>
+    
+    <hr>
+    <article id="parte2">
+
+        <h2 >Llamar a otra archivo CSS</h2>
+
+        <p> Para llamar a otra hoja de estilos se usa:
+        <br>
+        <code style="color: green";>
+             @import url("Ubicacion");
+        </code>
+
+        <br>
+        Pero esto es una mala practica, por que puede relentizar tu pagina.
+        <br>
+
+        <small>
+            NOTA:
+            <br>
+            Si es un CSS de preprocesamiento, entonces puede ser utilizado.
+        </small>
+       
+    </p>
+
+
+    </article>
+
+    
+
+    <hr>
+    <article id="parte3">
+        <h2>Selectores Básicos</h2>
+        <p>
+            1-Etiquetas: Son elementos HTML.
+            <br>
+            2-Identificadores: Es un atributo, se representa así <b>id</b> y en CSS se empieza con <b>"#"</b>.
+            <br>
+            3-Clases: Se representa así: <b>class</b> y en CSS se empieza con <b>"."</b>.
+            <br>
+            <br>
+            Ejemplo:
+            <br>
+            <b>*"id"</b>
+            <br>
+            Los "id" no deben usarse para aplicar estilos, se usan más para identificadores de JavaScript.
+            <br>
+            <br>
+            &lt;p id="parrafo-dos"&gt;Aquí debe haber contenido&lt;/p&gt;
+            <p id="parrafo-dos">Aquí debe haber contenido</p>
+            <br>
+            <code style="color: green;">
+                #parrafo-dos{
+                    <br>
+                    background-color: skyblue;
+                    <br>
+                }
+            </code>
+        </p>
+        <br>
+        <br>
+        
+        <b>*"class"</b>
+        <br>
+        Dar estilos con clases nos permite reutilizar código CSS.
+        <br>
+        Los espacios dentro del atributo class indican que habrá otra clase, es decir, es otro nombre que se le dio a ese atributo.
+        <br>
+        <br>
+        &lt;p class="text-20 bg-steelblue text-white"&gt;Aquí debe haber contenido&lt;/p&gt;
+        <br>
+        <code>
+            <pre class="media">
+            .text-20 {
+                font-size: 20px; <-Modifica el tamaño de letra. 
+            } 
+            
+            .bg-steelblue {
+                background-color: steelblue; <-Modifica el fondo.
+            }
+    
+            .text-white {
+                color: white; <-Modifica el color de la letra.
+            }
+            </pre>
+        </code>
+        <br>
+        <p class="text-20 bg-steelblue text-white">Aquí debe haber contenido</p>
+    </article>
+
+    <hr>
+    <article id="parte4">
+        <h2>Selectores-avanzados</h2>
+        <h3 class="sub">
+            <u>Selectores de hijos</u>
+        </h3>
+        <h4>*Selector de hijos directos</h4>
+        <br>
+        <p>Esto funciona asi, lo que esta a la izquierda es el padre y lo que esta a la derecha es el hijo directo.
+           Si seleccionas a un padre y pones "&gt;" si o si debe ser el hijo directo el que este en la izquierda.
+        </p>
+
+        <code>
+            <pre class="media">
+                .hijos-directos >li{
+                background-color: thistle;
+                }
+            </pre>
+        </code>
+
+        <p>Ejemplo de este caso:</p>
+
+        <ul class="hijos-directos">
+            <li><b>Primavera</b></li>
+            <li><b>verano</b></li>
+            <li><b>otono</b></li>
+            <li><b>invierno</b></li>
+        </ul>
+        
+
+        <h4>*Selector de hijos descendientes</h4>
+        <br>
+        <p>Esto funciona asi, lo primero que se escribe es como un tronco, en este caso es "hijos-descendientes" y "b" es uno de sus tantos descendientes.
+            Esta forma se usa para no tener que estar pensando necesariamente en respetar la jerarquía de descendientes.
+
+        </p>
+
+        <code>
+            <pre class="media">
+                .hijos-descendientes b{
+                    background-color: thistle;
+                }
+            </pre>
+        </code>
+
+        <p>Ejemplo de este caso:</p>
+        <ul class="hijos-descendientes">
+            <li><b>Primavera</b></li>
+            <li><b>verano</b></li>
+            <li><b>otono</b></li>
+            <li><b>invierno</b></li>
+        </ul>
+
+        <h3 class="sub">
+            <u>Selectores de hermanos</u>
+        </h3>
+        <h4>*Selector de hermanos en general(~)</h4>
+        <br>
+        
+        <p>
+            Los selectores de hermanos van a aplicar a  los elemntos que son hermanos
+            y que estan por debajo del elemento de referencia.
+
+        </p>
+
+        <code>
+            <pre class="media">
+                hermanos-general~li{
+                    background-color: thistle;
+                }
+
+                Tomo como base a:
+            </pre>
+
+            &lt;li class="hermanos-general"&gt;&lt;b&gt;verano&lt;/b&gt;&lt;/li&gt;
+        </code>
+
+        <ul >
+            <li><b>Primavera</b></li>
+            <li class="hermanos-general"><b>verano</b></li>
+            <li><b>otono</b></li>
+            <li><b>invierno</b></li>
+        </ul>
+
+        <h4>*Selector de hermanos adyacente(+)</h4>
+        <p>
+            Los selectores de hermanos van a aplicar a  los elemntos que son hermanos
+            al inmediato siguiente,tomando como referencia a la base(Solo se aplicara al siguiente).
+
+        </p>
+
+        <code>
+            <pre class="media">
+                .hermanos-adyacente+li{
+                    background-color: thistle;
+                }
+                Tomo como base a:
+            </pre>
+
+            &lt;li class="hermanos-adyacente"&gt;&lt;b&gt;verano&lt;/b&gt;&lt;/li&gt;
+        </code>
+
+        <ul >
+            <li><b>Primavera</b></li>
+            <li class="hermanos-adyacente"><b>verano</b></li>
+            <li><b>otono</b></li>
+            <li><b>invierno</b></li>
+        </ul>
+
+        <h3 class="sub">
+            <u>Selectores de atributos</u>
+        </h3>
+
+        <p>
+            *Expliquemos primero esto:
+            <br>
+            <code>
+                "&lt;li&gt;&lt;a href="https://jonmircha.com/" target="_blank"&gt;inicio&lt;/a&gt;&lt;/li&gt;"
+            </code> 
+            <br>
+            <h5>Que es target="_blank"?</h5>
+            
+            Esto se usa para indicar en el HTML que quiero que el enlace proporcionado en "href"
+            se abra en otra pestaña.
+            <br>
+            <br>
+            *En segundo lugar tenemos esto:
+            <br>
+            <code>
+                "&lt;nav class="selectores-atributos"&gt;&lt;/nav&gt;"
+            </code>
+            <br>
+            Estamos asignando un class al "nav" para hacer esto:
+            <br>
+            <code>
+                <pre class="media">
+                    .selectores-atributos a[href]{
+
+                        color: #2ecc71;
+                    }
+                </pre>
+            </code>
+            <br>
+            Con este codigo estamos diciendo que este efecto sera aplicado a:
+            <br>
+            <br>
+            💬 "a"<-La etiqueta<a> y solo aquellos que tengan dentro esto "href".
+            <br>
+            Otro ejemplo:
+            <br>
+            <code>
+                <pre class="media">
+                    .selectores-atributos a[target="_blank"]{
+
+                        font-weight: bold;
+                    }
+                </pre>
+            </code>
+            <br>
+            Aqui hacemos lo mismo, primero le decimos que etiqueta(&lt;a&gt;) y luego
+            le indicamos que debe a ver dentro de la etiqueta para que se ejecute el comando(target="_blank").
+            <br>
+            
+        </p>
+        <br>
+        <h4>COMODINES</h4>
+        
+        <section>
+            <p>
+                🕳️ Tenemos:
+                <br>
+                En este estamos usando un comodin, que es el "*".
+                Esto signica que si dentro del "href" esta la palabra "jonmircha" se aplica el estilo de abajo(En cualquier parte).
+                <br>
+                <code>
+                    <pre class="media">
+                        .selectores-atributos a[href*="jonmircha"]{
+
+                            font-size: 24px;
+                        }
+                    </pre>
+                </code>\
+                <br>
+                
+                <br>
+                <br>
+                
+
+            </p>
+        </section>
+
+        <section>
+            <p>
+                🕳️Aqui tenemos otro comodin "^", este comodin nos permite mas 
+                especifico a la hora de decir hasta que parte se debe cumplir para que realize la accion(Al inicio).
+                <br>
+                <br>
+                <code>
+                    <pre class="media">
+                        .selectores-atributos a[href^="http://"]{
+
+                        text-decoration: none;
+                    }
+                    </pre>
+                   
+                </code>
+                <br>
+
+            </p>
+        </section>
+
+        <section>
+            <p>
+                🕳️Aqui tenemos otro comodin "$", este comodin nos permite al igual que el anterior
+                especificar a la hora de como debe terminar  para que realize la accion(Al final).
+                <br>
+                <br>
+                <code>
+                    <pre class="media">
+                    .selectores-atributos a[href$=".com/"]{
+                         background-color: black;
+                    }
+                    </pre>
+                   
+                </code>
+                <br>
+
+            </p>
+        </section>
+
+        <section>
+            <p>
+                🕳️El comodin del "~" aplica el estilo si dentro del metadato esta el item que contiene el texto en cuestion en una lista.
+                
+                <br>
+                <br>
+                <code>
+                    <pre class="media">
+                    .selectores-atributos a[class~="cursos"]{
+                            background-color: blue;
+                    }
+                    </pre>
+                   
+                </code>
+                <br>
+
+            </p>
+        </section>
+
+        <section>
+            <p>
+                🕳️El comodin del | aplica el estilo si contienee 
+                el texto en cuestion en una lista separada por espacios y que despues del texto en cuestion venga un guion medio -.
+                
+                <br>
+                <br>
+                <code>
+                    <pre class="media">
+                        .selectores-atributos a[class|="menu"]{
+                            font-style:italic;
+                    }
+                    </pre>
+                   
+                </code>
+                <br>
+
+            </p>
+        </section>
+
+        
+        
+        <br>
+
+        <img src="img/Comodines.PNG" alt="comodines">
+        
+        <nav class="selectores-atributos">
+
+            <ul>
+                <li><a href="https://jonmircha.com/" target="_blank">inicio</a></li>
+                <li><a class="menu-item cursos button" href="http://jonmircha.com/" target="_blank">cursos</a></li>
+                <li><a href="" target="_blank">blog</a></li>
+                <li><a href="" target="_blank">cv</a></li>
+                <li><a href="" target="_blank">ahora</a></li>
+                <li><a href="" target="_blank">notas</a></li>
+                <li><a href="Teoria_Css.html">regresar al inicio</a> <- Este no cambia por que no tiene el target = "_blank" </li>
+            </ul>
+        </nav>
+        <br>
+
+        <h3 class="sub">
+            <u>Selectores universales(*)</u>
+        </h3>
+        <br>
+
+        <section> 
+            <h4>
+                Primera Forma
+            </h4>
+            <br>
+            <p>
+                Se usa para afectar a "todo" el documento html.
+            </p>
+            <br>
+            <code>
+                <pre class="media">
+                    *{
+                        font-family: Helvetica;
+                    }
+                </pre>
+            </code>
+        </section>
+
+        <section>
+            <h4>
+                Segunda forma
+            </h4>
+            <br>
+            <p>
+                Esta se usa para afectar todo lo que este dentro del class.
+
+            </p>
+            <br>
+            <code>
+                <pre class="media">
+                    Este es el class->.selector-universal *{
+
+                        font-size: 24px;
+                    }
+                </pre>
+            </code>
+            <br>
+
+          <ul class="selector-universal">
+            <li><b>Primavera</b></li>
+            <li><b>verano</b></li>
+            <li><b>otono</b></li>
+            <li><b>invierno</b></li>
+          </ul>
+
+        </section>
+
+    </article>
+
+    <hr>
+    <article id="oarte5">
+        <h2>
+            Pseudoclases
+        </h2>
+
+        <section>
+            <div>
+                <h3>
+                    required
+                </h3>
+                <p>
+                    Cuando queremos que el borde de una "input" mantenga un color o cambia a un color cuando esta falte completar
+                    ,se usa:
+                    <code>
+                        <pre class="media">
+                            .form-pseudoclases *:required{
+                                border-color: yellow;
+                            }
+                        </pre>
+                    </code>
+                </p>
+            </div>
+        </section>
+        
+        <br>
+
+        <section>
+            <div>
+                <h3>
+                    Valid
+                </h3>
+
+                <p>
+                    Ahora si queremos que al estar todo correcto en un formulario el borde se vuelva de un color, hacemos esto:
+                    <code>
+                        <pre class="media">
+                            .form-pseudoclases *:valid{
+                                border-color: green;
+                            }
+                        </pre>
+                    </code>
+                </p>
+            </div>
+        </section>
+
+        <br>
+
+        <section>
+            <div>
+                <h3>
+                    invalid
+                </h3>
+                <p>
+                    Ahora si queremos que los bordes cambien de color a la hora que el formulario fue mal llenado, hacemos esto:
+                    <code>
+                        <pre class="media">
+                            .form-pseudoclases *:invalid{
+                                border-color: red;
+                            }
+                        </pre>
+                    </code>
+                </p>
+            </div>
+        </section>
+
+        <br>
+
+        <section>
+            <div>
+                <h3>
+                    focus
+                </h3>
+                <p>
+                    Ahora si queremos que los recuadros de los formularios tengan un color a la hora de clikear sobre ellos, hacemos esto:
+                    <code>
+                        <pre class="media">
+                            .form-pseudoclases *:focus{
+                                background-color: skyblue;
+                            }
+                        </pre>
+                    </code>
+
+                    <small>
+                        Nota:
+                        <br>
+                        &lt;input type="submit" disabled&gt;
+                        <br>
+                        La palabra disabled se utiliza para deshabilitar el boton.
+                        <br>
+                        Tambien puedes darle un color a este boton desactivado.
+                        <br>
+                        <code>
+                            <pre class="media">
+                                .form-pseudoclases *:disabled{
+                                    background-color: pink;
+                                }
+                            </pre>
+                        </code>
+                    </small>
+                </p>
+                <br>
+                <img src="img/Estilos a los formularios.PNG" alt="formulario">
+            </div>
+        </section>
+
+
+        <form class="form-pseudoclases">
+            <input type="text" name="nombre" placeholder="Escribe tu nombre" required>
+            <br>
+            <input type="email" name="correo" placeholder="Escribe tu correo" required>
+            <br>
+            <input type="submit" disabled>
+        </form>
+        <br>
+
+        <section>
+            <div>
+                <h4>Como cambiar color a los enlaces?</h4>
+
+                <p>
+                    Para cambiar el color de los enlaces, tenemos los siguientes:
+                    <br>
+                </p>
+
+                <h5>
+                    Enlaces visitados
+                </h5>
+                <p>
+                    Para dar un color diferentes a los enlaces visitados del color que viene predeterminado se hace esto.
+
+                    <code>
+                        <pre class="media">
+                            .form-pseudoclases *:visited{
+                                color: olive;
+                            }
+                        </pre>
+                    </code>
+                </p>
+
+                <br>
+
+                <h5>
+                    Color de los enlaces
+                </h5>
+                <p>
+                    Para dar un color diferentes a los enlaces, se hace esto: 
+                    <code>
+                        <pre class="media">
+                            .menu-pseudoclases a:hover{
+                                color: orange;
+                            }
+                        </pre>
+                    </code>
+                </p>
+
+                <small>
+                    Nota:
+                    <br>
+                    En el css hay jerarquia y si queremos por ejemplo en el caso de los enlaces
+                    poder seguir visitando un enlace vistitado, debemos primer agregar un estilo a
+                    <b>visited</b> y despues a <b>hover</b>.
+
+                    <br>
+                    <br>
+
+                    Nota2:
+                    <br>
+                    <p>El "hober" no solo se usa en link si no pueden ser aplicadas a cualquier tipo etiqueta.</p>
+                    <br>
+                    EJEM:
+                    <br>
+                    <p class="p-pseudoclases">
+                        Hola este texto debe cambiar de tamano debido a :
+                    </p>
+                    <br>
+
+                    <code>
+                        <pre>
+                            .p-pseudoclases:hover{
+                                font-size: 20px;
+                            }
+
+                        </pre>
+                    </code>
+                </small>
+
+                <p>🕳️Si a una id le ponemos el atributo target en el css, podemos hacer algo parecido a esto:
+
+                </p>
+                <br>
+                <code>
+                    <pre>
+                        #parte1:target{
+                            background-color: lightgreen;
+                        }
+                    </pre>
+                </code>
+
+                <br>
+                <P>Para visualizar esto debes ir al indice.</p>
+            </div>
+            
+
+        </section>
+        <br>
+
+        <nav>
+            <a href="#seccion1">seccion1</a>
+            <a href="#seccion2">seccion2</a>
+            <a href="#seccion3">seccion3</a>
+            <a href="#seccion4">seccion4</a>
+        </nav>
+
+    </article>
+    
+
+    
+    
+</body>
+</html>

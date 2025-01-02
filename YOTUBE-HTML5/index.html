@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamento de HTML</title>
+    <meta name="description" content="En esta parte veremos lo basico de HTML">
+    <link rel="stylesheet"href="assets/estilos.css">
+    <link rel="canonical" href="http://tudominio.com/la-url-canonica">
+    <link rel="icon" href="img/Icon_Manzana.jfif">
+    <link rel="apple-touch-icon" href="img/icon.png">
+    <meta name="theme-color" content="#ff6600">
+    <meta proterty="og:title" content="Aprendiendo html">
+    <meta proterty="og:description" content="En esta parte veremos lo basico de HTML">
+    <meta proterty="og:image" content="https//tudominio.com">
+    <meta proterty="og:url" content="https//tudominio.com/index.html">
+    <meta proterty="twitter:card" content="summary">
+    <meta proterty="twitter:site" content="@patrickalcantara">
+</head>
+
+<body>
+
+
+    <h1>FUNDAMENTOS DE HTML</h1>
+    <hr>
+    
+
+    <h3>TEMARIO</h3>
+
+    <li><a href="index.html#parte1">La cabeza del HTML</a></li>
+    <li><a href="index.html#parte2">Los tipos de letra</a></li>
+    <li><a href="index.html#parte3">Etiquetas semanticas estructurales</a></li>
+    <li><a href="index.html#parte4">Etiquetas de bloques VS etiquetas de linea</a></li>
+    <li><a href="index.html#parte5">Estilos Css en html</a></li>
+    <li><a href="index.html#parte6">Java Script en HTML</a></li>
+    <li><a href="index.html#parte7">Imágenes</a></li>
+    <li><a href="index.html#parte8">Imágenes vectoriales</a></li>
+    <li><a href="index.html#parte9">Figuras</a></li>
+    <li><a href="index.html#parte10">Listas</a></li>
+    <li><a href="index.html#parte11">Listas de definicion</a></li>
+    <li><a href="index.html#parte12">Tablas</a></li>
+    <li><a href="index.html#parte13">Enlaces</a></li>
+    <li><a href="index.html#parte14">Enlace de Direcciones</a></li>
+    <li><a href="index.html#parte15">Elementos interactivos</a></li>
+    <li><a href="index.html#parte16">Acordeon</a></li>
+    <li><a href="index.html#parte17">Audio y video</a></li>
+    <li><a href="index.html#parte18">Iframes</a></li>
+    <li><a href="index.html#parte19">Elementos de Formularios</a></li>
+    <li><a href="index.html#parte20">Creando un formulario</a></li>
+    <li><a href="index.html#parte21">Data atributes</a></li>
+  
+    <h2 id="parte1"><u>La cabeza del HTML</u></h2>
+
+    <section>
+        <p>Lista de etiquetas HTML:</p>
+        <ul>
+            <li><span class="keyword">&lt;html&gt;</span>: Define el inicio y el final del documento HTML y el elemento raíz del mismo.</li>
+            <li><span class="keyword">&lt;meta&gt;</span>: Incluye metadatos en el documento HTML, proporcionando información adicional sobre el mismo.</li>
+            <li><span class="keyword">&lt;title&gt;</span>: Define el título del documento HTML, que se muestra en la barra de título del navegador.</li>
+            <li><span class="keyword">&lt;link&gt;</span>: Vincula recursos externos al documento HTML, como hojas de estilos, iconos, fuentes, etc.</li>
+        </ul>
+    </section>
+
+    <section>
+        <p>Estos son los metadatos que se encuentran en el encabezado del documento HTML:</p>
+
+        <ul>
+            <li><strong class="concept">DOCTYPE:</strong> Define la versión de HTML utilizada.</li>
+            <br>
+            <li><strong class="concept">html lang:</strong> Define el idioma del contenido.</li>
+            <br>
+            <li><strong class="concept">:charset:</strong> Define la codificación de caracteres utilizada.</li>
+            <br>
+            <li><strong class="concept">viewport:</strong> Define cómo el navegador controla el tamaño y la escala de la página en dispositivos móviles.</li>
+            <br>
+            <li><strong class="concept">title:</strong> Define el título del documento.</li>
+            <br>
+            <li><strong class="concept">description:</strong> Proporciona una descripción breve del contenido de la página.</li>
+            <br>
+            <li><strong class="concept">stylesheet:</strong> Enlaza una hoja de estilo externa.</li>
+            <br>
+            <li><strong class="concept">canonical:</strong> Especifica la URL canónica del documento.</li>
+            <br>
+            <li><strong class="concept">icon:</strong> Define el ícono que se mostrará en la pestaña del navegador y en la lista de marcadores.</li>
+            <br>
+            <li><strong class="concept">apple-touch-icon:</strong> Define el ícono que se usará en dispositivos Apple.</li>
+            <br>
+            <li><strong class="concept">theme-color:</strong> Define el color del tema del navegador móvil.</li>
+            <br>
+            <li><strong class="concept">og:title:</strong> Proporciona el título del documento para vistas previas en redes sociales (Open Graph).</li>
+            <br>
+            <li><strong class="concept">og:description:</strong> Proporciona una descripción del documento para vistas previas en redes sociales (Open Graph).</li>
+            <br>
+            <li><strong class="concept">og:image:</strong> Especifica la imagen que se utilizará en las vistas previas en redes sociales (Open Graph).</li>
+            <br>
+            <li><strong class="concept">og:url:</strong> Especifica la URL del documento para vistas previas en redes sociales (Open Graph).</li>
+            <br>
+            <li><strong class="concept">twitter:card:</strong> Define el tipo de tarjeta de Twitter que se utilizará para la vista previa en Twitter.</li>
+            <br>
+            <li><strong class="concept">twitter:site:</strong> Especifica el nombre de usuario de Twitter asociado con el sitio.</li>
+            <br>
+            <li><strong class="concept">strong:</strong> Se utiliza en HTML para dar énfasis al texto.</li>
+            <br>
+            <li><strong class="concept">class:</strong>La clase en HTML es un atributo que se incluye dentro de la etiqueta de un elemento HTML para identificarlo y aplicar estilos CSS específicos.</li>
+
+        </ul>
+    </section>
+    <br>
+    <img src="img/Cabeza del HTML.PNG" alt="Cabeza del HTML">
+    <hr>
+    <br>
+
+   <h2 id="parte2"><u>Los tipos de letra</u></h2>
+
+   <ul>
+    <li><strong class="xd">Párrafos (<code>&lt;p&gt;</code>):</strong> Se utilizan para agrupar bloques de texto o contenido. Son elementos de bloque que crean un nuevo párrafo en el documento.</li>
+
+    <li><strong class="xd">Texto en negrita (<code>&lt;b&gt;</code>):</strong> Se utiliza para resaltar el texto haciendo que aparezca en negrita.</li>
+
+    <li><strong class="xd">Texto en cursiva (<code>&lt;i&gt;</code>):</strong> Se utiliza para resaltar el texto haciendo que aparezca en cursiva o itálica.</li>
+
+    <li><strong class="xd">Texto subrayado (<code>&lt;u&gt;</code>):</strong> Se utiliza para resaltar el texto haciendo que aparezca subrayado, aunque su uso no es común debido a que el subrayado puede asociarse con enlaces en la web.</li>
+
+    <li><strong class="xd">Superíndice (<code>&lt;sup&gt;</code>):</strong> Se utiliza para representar texto en una posición superior a la línea de base, comúnmente utilizado para exponentes.</li>
+
+    <li><strong class="xd">Resaltado (<code>&lt;mark&gt;</code>):</strong> Se utiliza para resaltar partes de un texto, a menudo con un color de fondo diferente para llamar la atención del lector.</li>
+
+    <li><strong class="xd">Texto en tamaño pequeño (<code>&lt;small&gt;</code>):</strong> Se utiliza para reducir el tamaño del texto, generalmente para notas de pie de página o texto menos importante.</li>
+
+    <li><strong class="xd">Subíndice (<code>&lt;sub&gt;</code>):</strong> Se utiliza para representar texto en una posición inferior a la línea de base, comúnmente utilizado para subíndices.</li>
+
+    <li><strong class="xd">Texto fuertemente enfatizado (<code>&lt;strong&gt;</code>):</strong> Se utiliza para indicar que el texto es especialmente importante o relevante, a menudo se muestra en negrita por defecto.</li>
+
+    <li><strong class="xd">Citas en bloque (<code>&lt;blockquote&gt;</code>):</strong> Se utiliza para citar un bloque de texto que debe ser separado del texto principal y con un estilo de presentación especial.</li>
+
+    <li><strong class="xd">Cita del autor (<code>&lt;cite&gt;</code>):</strong> Se utiliza para citar el nombre del autor de una cita o referencia.</li>
+
+    <li><strong class="xd">Salto de línea (<code>&lt;br&gt;</code>):</strong> Se utiliza para insertar un salto de línea en el texto, generalmente dentro de un párrafo para forzar un cambio de línea.</li>
+
+    <li><strong class="xd">Línea horizontal (<code>&lt;hr&gt;</code>):</strong> Se utiliza para crear una línea horizontal que separa el contenido, como secciones diferentes de una página web.</li>
+
+    <li><strong class="xd">Texto preformateado (<code>&lt;pre&gt;</code>):</strong> Se utiliza para mostrar texto con un formato fijo, conservando los espacios en blanco y los saltos de línea tal y como están escritos en el código HTML.</li>
+
+    <li><strong class="xd">Código (<code>&lt;code&gt;</code>):</strong> Se utiliza para resaltar y mostrar fragmentos de código dentro del texto, a menudo con una fuente de ancho fijo para facilitar la lectura.</li>
+   </ul>
+   <br>
+   <h4>EJEMPLO :</h4>
+
+    <P>Bueno empezaremos a ver los tipos de letra: <p>(Etiquetas de línea  👆🏻)</p>
+    <B>Esto debe estar en negro</B>,
+    <I>Esto debe estar en itálica</I>,
+    <U>Esto es subrayado, yo no lo uso xd</U>,
+    ahora el exponente x<sup>2</sup>  de debería ver el exponente,
+    ahora <mark>no sé qué será</mark>,
+    ahora <small>Las famosas letras pequeñas</small>
+    y al final lo que está abajo h<sub>2</sub>
+    o el strong que es <strong>Esto es más importante</strong></P>
+
+    <P></P>
+    <P></P>
+    <P></P>
+    <P></P>
+    <P>Ahora veremos cómo se cita:</P>
+    <blockquote>"Yo solo sé que nada sé"</blockquote>
+    <cite>Sócrates</cite>
+    <br>
+    <P>Bueno lo que ahora te quiero mostrar son los 
+        saltos de línea que se hacen con "&lt;br&gt;" por ejemplo aquí<br> y seguimos escribiendo
+        pero va a llegar el momento en donde quiera otro <br> y volvemos a hacerlo
+    </P>
+    <P>ahora para dividir secciones es "&lt;hr&gt;" y lo uso aquí</P>
+    <hr>
+    <P>¿Lo viste xd?</P>
+
+    <p>Bueno ahora veremos la etiqueta de preformateo 
+        que es : "&lt;pre&gt;"</p>
+    <pre>Tareas por hacer :
+        -Estudiar
+          -html
+          -css
+          -javascript
+        -Limpieza
+          -la casa
+          -el escritorio
+    </pre>
+
+    <br>
+    
+    <P>Y esto es código:</P>
+
+    <code>public class static void(String args[]){}</code>
+    <br>
+    <br>
+
+    <img src="img/Tipos de letras_1.PNG" alt="Tipos de letras">
+    <img src="img/tipos de letras_2.PNG" alt="Tipos de letras">
+
+    <hr>
+    
+    <h2 id="parte3">Etiquetas semanticas estructurales</h2><p>(Etiquetas de bloque 👆🏻)</p>
+    <br>
+    
+    <div><strong class="media">&lt;div&gt;</strong>: Es una etiqueta contenedora que no tiene semántica.</div>
+    <header><strong class="media">&lt;header&gt;</strong>: Cabecera de un sitio web o de una sección.</header>
+    <nav><strong class="media">&lt;nav&gt;</strong>: Representa una navegación.</nav>
+    <main><strong class="media">&lt;main&gt;</strong>: Define la sección principal del documento, solo puede existir una etiqueta main por documento.</main>
+    <footer><strong class="media">&lt;footer&gt;</strong>: Pie de página de un sitio web o de una sección.</footer>
+    <article><strong class="media">&lt;article&gt;</strong>: Representa una sección autocontenida (que por sí sola se explica).</article>
+    <aside><strong class="media">&lt;aside&gt;</strong>: Representa contenido complementario o secundario.</aside>
+    <section><strong class="media">&lt;section&gt;</strong>: Representa una sección de contenido genérico.</section>
+    <address><strong class="media">&lt;address&gt;</strong>: Representa información de contacto.</address>
+
+    <br>
+
+    <img src="img/Estructura Semantica de la pagina-HTML5.png" alt="Estructura semantica">
+    
+    <hr>
+
+    <h2 id="parte4">Etiquetas de bloques VS etiquetas de linea</h2>
+
+    <div>La etiqueta de bloque por excelencia es el &lt;div&gt;.Es aquella que ocupa demas y genera saltos de linea.</div>
+    <br>
+    <span>La etiqueca de linea por excelencia es la &lt;span&gt;.Ocupa el espacio necesario.No generan salto de linea a otras etiquetas</span>
+    <br>
+    <br>
+    <img src="img/Elementos-de-bloque-y -en-línea-HTML.png" alt="Linea y bloque" width="600" height="400">
+
+
+    <hr>
+    <h2 id="parte5">Estilos Css en html</h2>
+    <br>
+    <p>Bueno tenemos dos maneras de agregar color, estas son:</p>
+    <b>&lt;span style="background-color: greenyellow"&gt;comida&lt;/span&gt;</b>
+    <br>
+    <span style="background-color: greenyellow">comida</span>
+    <br>
+    <b>&lt;p style="background-color: yellow"&gt;Esto va dentro de una etiqueta.&lt;/p&gt;</b>
+    <p style="background-color: yellow">Esto va dentro de una etiqueta.</p>
+    <p><b>La otra es así:</b><br>En este caso seria para dar color a los titulos h2</p>
+    <b></b>
+    <p>Esto debe ir en la cabeza del HTML:</p>
+    &lt;style&gt;
+        h2 {
+            color: brown;
+        }
+    &lt;/style&gt;
+
+    <br>
+    <p>Pero si solo quieres que sea a una palabra haces esto:</p>
+    <p class="media">&lt;h4 style="color: yellow;"&gt;Texto de ejemplo :&lt;/h4&gt;</p>
+    <h4 style="color: yellow;">Texto de ejemplo :</h4>
+    
+    <p>La forma correcta es hacerlo dentro un archivo de estilos.</p>
+    <p>Para conectar la hoja de estilos con el HTML, se usa:</p>
+    <p class="media">&lt;link rel="stylesheet" href="assets/estilos.css"&gt;</p>
+    <p>Para el tipo de letra se usa:</p>
+    <p>body { font-family: "Andale Mono", sans-serif; }</p>
+
+    <hr>
+    <h2 id="parte6">Java Script en HTML</h2>
+
+    <p>Esta conexión con JavaScript siempre debe ir al final del body.</p>
+    <br>
+    <p>Para conectar con el script :</p>
+    <p class="media">&lt;script src="assets/codigos.js"&gt;&lt;/script&gt;</p>
+    <p>Para escribir:</p>
+    <p class="media">&lt;script&gt;console.log("Hola, estamos aprendiendo HTML")&lt;/script&gt;</p>
+    <br>
+    
+    <p><mark>Pero la práctica correcta es crear un archivo aparte.</mark></p>
+
+
+    <hr>
+    <h2 id="parte7">Imágenes</h2>
+
+    <p>Para poner una imagen se usa:</p>
+    <ul>
+        <li>El elemento <code>&lt;img&gt;</code> con los atributos <code>src</code>, <code>alt</code>, <code>width</code> y <code>height</code>.</li>
+        <li>La mejor forma de manejar el ancho es mediante CSS:</li>
+    </ul>
+    <pre><code>img {
+        max-width: 100%;
+        height: auto;
+    }
+    </code></pre>
+    <p>Ejemplo de uso:</p>
+    <div class="media">&lt;img src="img/90.png" alt="Tabla" width="600" height="400"&gt;</div>
+    <br>
+    <img src="img/90.png" alt="Tabla" width="600" height="400">
+    <hr>
+    
+    <h2 id="parte8">Imágenes vectoriales</h2>
+
+    <p>Se usa para no perder calidad mayormente.</p>
+
+    <div class="media">&lt;img src="img/capybara-svgrepo-com.svg" alt="capybara" width="600" height="400"&gt;</div>
+    <br>
+    <img src="img/capybara-svgrepo-com.svg" alt="capybara">
+    <hr>
+    
+    <h2 id="parte9">Figuras</h2>
+    
+    <p><strong class="concept">&lt;figure&gt;</strong>: Esta etiqueta se utiliza para envolver cualquier contenido independiente, como imágenes, gráficos, ilustraciones, diagramas, código, etc. Ayuda a asociar un título o leyenda con ese contenido.</p>
+    <br>
+    <p><strong class="concept">&lt;img&gt;</strong>: Esta etiqueta se utiliza para insertar una imagen en una página web. El atributo <em>src</em> especifica la ruta de la imagen que se debe mostrar. El atributo <em>alt</em> proporciona un texto alternativo que se mostrará si la imagen no se puede cargar o si el usuario utiliza un lector de pantalla.</p>
+    <br>
+    <p><strong class="concept">&lt;figcaption&gt;</strong>: Esta etiqueta se utiliza para definir la leyenda de una figura (&lt;figure&gt;). Proporciona una descripción o título para la imagen o contenido dentro de la etiqueta &lt;figure&gt;. Es importante para mejorar la accesibilidad web, ya que proporciona contexto adicional sobre el contenido visual para usuarios que no pueden ver la imagen.</p>
+    <br>
+    <P class="concept">Ejemplo :</P>
+    <pre>
+
+      <div>&lt;figure&gt;</div>
+        <div>  &lt;img src="ruta/a/la/imagen.png" alt="tabla de los elementos HTML"&gt;</div>
+        <div>  &lt;figcaption>Tabla de los elementos HTML&lt;/figcaption&gt;</div>
+      <div>&lt;/figure&gt;</div>
+
+    </pre>
+    
+    <figure> 
+        <img src="img/periodic table of labels.jpg" alt="tabla de los elementos HTML">
+        <figcaption>Tabla de los elementos HTML</figcaption>
+    </figure>
+    
+    
+
+    <hr>
+    <h2 id="parte10">Listas</h2>
+    <br>
+
+    <h3 style="color: blueviolet;">Listas Ordenadas</h3>
+    <p>La etiqueta <code>&lt;ol&gt;</code> crea una lista ordenada.</p>
+    <p>La etiqueta <code>&lt;li&gt;</code> define un ítem de la lista.</p>
+    <p>*Con el atributo <code><mark>start</mark></code> podemos especificar el número desde el cual empezar la lista.</p>
+
+    <p>Por ejemplo:</p>
+    <ol start="4">
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+    </ol>
+
+    <p>*La etiqueta <code>&lt;ol reversed&gt;</code> crea una lista ordenada en orden inverso.</p>
+    <ol reversed>
+        <li>Elemento 3</li>
+        <li>Elemento 2</li>
+        <li>Elemento 1</li>
+    </ol>
+
+    <p>*La etiqueta <code>&lt;ol type="I"&gt;</code> crea una lista ordenada con enumeración romana en mayúsculas (I, II, III, ...).</p>
+    <ol type="I">
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+    </ol>
+
+    <br>
+
+    <h3 style="color: blueviolet;">Listas Desordenadas</h3>
+    <p>La etiqueta <code>&lt;ul&gt;</code> crea una lista desordenada.</p>
+    <p>La etiqueta <code>&lt;ul type="square"&gt;</code> crea una lista desordenada con viñetas cuadradas.</p>
+    <ul type="square">
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+    </ul>
+
+    
+
+    <p>La etiqueta <code>&lt;a href="index.html#"&gt;🔝&lt;/a&gt;</code> crea un enlace que lleva al usuario de vuelta a la parte superior de la página (a través del enlace #). El emoji 🔝 se muestra como texto de anclaje.</p>
+
+    <h3>Ejemplos de listas ordenadas</h3>
+
+    <ol>
+        <li>primavera</li>
+        <li>otono</li>
+        <li>invierno</li>
+        <li>verano</li>
+    </ol>
+
+    <p>con el atributo <b><mark>start</mark></b> podemos decirle descuando empezar</p>
+
+    <ol start="4">
+        <li>primavera</li>
+        <li>otono</li>
+        <li>invierno</li>
+        <li>verano</li>
+    </ol>
+    <br>
+    <p>podemos poner <b><mark>reversed</mark></b> para hacerlo inverso la lista</p>
+
+
+    <ol reversed>
+        <li>primavera</li>
+        <li>otono</li>
+        <li>invierno</li>
+        <li>verano</li>
+    </ol>
+
+    <br>
+    <p>Ahora usaremos<b><mark>type</mark></b> para elegir el tipo de enumeracion,esta me gusta mas.</p>
+    <ol type="I">
+        <li>primavera</li>
+        <li>otono</li>
+        <li>invierno</li>
+        <li>verano</li>
+    </ol>
+
+    <h3>Ejemplo de listas desordenadas</h3>
+
+    <ul>
+        <li>humungosaurio</li>
+        <li>fuego pantanoso</li>
+        <li>frio</li>
+        <li>alien x</li>
+    </ul>
+
+        
+    <p>A esta tambien se puede usar el atributo type.Entre "disc" , "circle" y "square"</p>
+
+    <ul type="square">
+        <li>humungosaurio</li>
+        <li>fuego pantanoso</li>
+        <li>frio</li>
+        <li>alien x</li>
+    </ul>
+    <br>
+    <a href="index.html#">🔝</a>
+
+
+    <hr>
+    <h2 id="parte11">Listas de definicion</h2>
+
+    <p>Esta se usa para crea la lista el "dl" y para poner sus item se usa "dt" y para la descripcion se usa "dd"</p>
+        
+    <br>
+    <p>Ejemplo:</p>
+    <br>
+    <img src="img/Lista de Definiciones.PNG" alt="Definiciones">
+    <br>
+
+    <dl>
+        <dt>HTML</dt>
+        <dd>Es un lenguaje de enmarcado</dd>
+
+        <dt>css</dt>
+        <dd>Es un  lenguaje de estilos de apariencias</dd>
+    </dl>
+    
+    <hr>
+
+    <h2 id="parte12">Tablas</h2>
+
+    <br>
+
+    <article>
+        <section class="media">
+            &lt;table&gt;:
+            Esta etiqueta define una tabla en HTML. Es el contenedor principal para todas las filas, columnas y celdas de la tabla.
+        </section>
+    
+        <section class="media">
+            &lt;tr&gt;:
+            Esta etiqueta define una fila en la tabla. Dentro de cada &lt;tr&gt; se colocan las celdas de la fila.
+        </section>
+    
+        <section class="media">
+            &lt;td&gt;:
+            Esta etiqueta define una celda de datos en una tabla. Especifica el contenido de una celda en una fila.
+        </section>
+    
+        <section class="media">
+            &lt;thead&gt;:
+            Esta etiqueta define la sección de encabezado de una tabla. Se utiliza para agrupar las filas que contienen encabezados de columna.
+        </section>
+    
+        <section class="media">
+            &lt;tbody&gt;:
+            Esta etiqueta define la sección del cuerpo de una tabla. Contiene las filas que representan los datos principales de la tabla.
+        </section>
+    
+        <section class="media">
+            &lt;th&gt;:
+            Esta etiqueta define una celda de encabezado en una tabla. Se utiliza para representar encabezados de fila o columna en una tabla. A menudo se usa en la primera fila o en las primeras columnas de una tabla para identificar los datos en esa fila o columna.
+        </section>
+    
+        <section class="media">
+            &lt;th colspan="3"&gt;:
+            Esta etiqueta define una celda de encabezado en una tabla y especifica que debe ocupar tres columnas.
+        </section>
+    
+        <section class="media">
+            &lt;td rowspan="2"&gt;:
+            Esta etiqueta define una celda de datos en una tabla y especifica que debe ocupar dos filas.
+        </section>
+    </article>
+    
+
+    <table>
+        <tr>
+            <td>Nombre</td>
+            <td>Constelación</td>
+            <td>Tipo</td>
+        </tr>
+        <tr>
+            <td>Ikki</td>
+            <td>Fénix</td>
+            <td>Bronce</td>
+        </tr>
+        <tr>
+            <td>Shaine</td>
+            <td>Ofiuco</td>
+            <td>Plata</td>
+        </tr>
+        <tr>
+            <td>Saga</td>
+            <td>Géminis</td>
+            <td>Dorado</td>
+        </tr>
+    </table>
+
+    <br> 
+
+    <h4 style="color: aqua;">Una tabla mejor</h4>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Constelación</th>
+                <th>Tipo</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <th colspan="3">Tabla de los santos de Atenas</th> 
+            </tr>
+
+            <tr>
+                <td rowspan="2">Ikki</td> 
+                <td>Fénix</td>
+                <td>Bronce</td>
+            </tr>
+
+            <tr>
+                
+                <td>Shaine</td>
+                <td>Ofiuco</td>
+                <td>Plata</td>
+            </tr>
+
+            <tr>
+                
+                <td>Saga</td>
+                <td>Géminis</td>
+                <td>Dorado</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    <hr>
+
+    <h2 id="parte13">Enlaces</h2>
+
+    <p>&lt;a href=&quot;hola.html&quot;&gt;hacia la página Hola&lt;/a&gt;</p>
+    <a href="hola.html">hacia la pagina Hola</a>
+
+    <br>
+    <p>&lt;a href=&quot;https://chat.openai.com/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Para abrir ChatGPT&lt;/a&gt;</p>
+
+    <a href="https://chat.openai.com/" target="_blank" rel="nofollow">Para abrir chatgpt</a>
+    <br>
+
+    <p style="color: azure;">Enlaces con Imagenes</p>
+
+    <p>&lt;a href=&quot;https://www.minecraft.net/en-us&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;
+        &lt;img src=&quot;img/90.png&quot; alt=&quot;minecraft&quot; width=&quot;40&quot; height=&quot;40&quot;&gt;
+    &lt;/a&gt;</p>
+    
+    <a href="https://www.minecraft.net/en-us" target="_blank" rel="nofollow">
+        <img src="img/90.png" alt="minecraf" width="40" height="40">
+    </a>
+
+    <br>
+    <hr>
+
+
+    <h2 id="parte14">Enlace de direccion cosas</h2>
+
+    <p>El primer enlace &lt;a&gt; tiene la dirección de correo electrónico "patrickcomeresbueno@gmail.com". Cuando se hace clic en este enlace, se abrirá la aplicación de correo electrónico predeterminada del usuario (por ejemplo, Outlook, Gmail, etc.), si está configurada. El atributo target="_blank" hace que el enlace se abra en una nueva pestaña o ventana del navegador, y el atributo rel="nofollow" indica a los motores de búsqueda que no sigan el enlace.</p>
+
+    <p>El segundo enlace &lt;a&gt; tiene el número de teléfono "+51 934008679". Sin embargo, es importante destacar que no es una práctica común usar un enlace &lt;a&gt; para un número de teléfono. Esto puede causar confusión en los usuarios, ya que esperan que un enlace los lleve a una página web. Si se hace clic en este enlace, dependiendo del navegador y la configuración del sistema, puede intentar iniciar una llamada telefónica. Al igual que el primer enlace, el atributo target="_blank" abre el enlace en una nueva pestaña o ventana, pero el atributo rel="_blank" debería ser simplemente rel="noopener" para mejorar la seguridad y evitar que la página enlazada tenga acceso al documento que lo abrió.</p>
+
+    <br>
+
+    <p>&lt;h2 id="parte15"&gt;Elementos interactivos&lt;/h2&gt; define un encabezado de nivel 2 con el texto "Elementos interactivos". El atributo id="parte15" proporciona un identificador único para este encabezado, lo que facilita enlazar directamente a este elemento desde otros lugares en la misma página.</p>
+
+    <p>&lt;button onclick="alert('hola haz cliqueado este boton')"&gt;Este es un boton&lt;/button&gt; es un botón interactivo. Cuando se hace clic en él, ejecuta una función JavaScript que muestra un cuadro de diálogo de alerta con el mensaje "hola haz cliqueado este boton". El texto dentro del botón es "Este es un boton".</p>
+
+
+    <a href="patrickcomeresbueno@gmail.com" target="_blank" rel="nofollow">Correo Electronico</a>
+    <br>
+    <a href="+51 934008679" target="_blank" rel="_blank">Numero telefonico</a>
+    <br>
+    <img src="img/Direcciones.PNG" alt="Direcciones">
+    <hr>
+    
+
+    <h2 id="parte15">Elementos interactivos</h2>
+
+    <ul>
+        <li><strong>&lt;button&gt;:</strong> Esto crea un elemento de botón en HTML.</li>
+        <li><strong>onclick="alert('hola haz cliqueado este boton')":</strong> Este es un atributo de evento onclick en el botón. Cuando el botón se hace clic, se activa este evento. En este caso, el evento onclick está configurado para mostrar una ventana emergente (alert) que dice "hola haz cliqueado este botón".</li>
+        <li><strong>"Este es un botón":</strong> Este es el texto visible en el botón.</li>
+    </ul>
+    <br>
+    <img src="img/boton interactivo.PNG" alt="boton">
+    <br>
+
+    <button onclick="alert('hola haz cliqueado este boton')">Este es un boton</button>
+
+    <hr>
+
+    <h2 id="parte16">Acordeon</h2>
+
+    <details>
+        <summary>Titulo acordeon</summary>
+        <article>
+            <h3>Contenido del acordeon</h3>
+            <img src="img/Acordeon uno.PNG"  alt="capibara">
+
+        </article>
+        <p>comer</p>
+        <p>bailar</p>
+    </details>
+
+    <br>
+
+    <details open>
+        <summary>Titulo acordeon</summary>
+        <article>
+            <h3>Contenido del acordeon xd</h3>
+            <img src="img/Acordeon dos.PNG"  alt="minecraft">
+            
+        </article>
+        <p>ana</p>
+        <p>bailar</p>
+    </details>
+
+    <hr>
+
+
+    <h2 id="parte17">Audio y video</h2>
+    <br>
+    <dl>
+        <dt class="media">&lt;audio&gt;</dt>
+        <dd>Este es el elemento HTML utilizado para incorporar archivos de audio en una página web.</dd>
+        
+        <dt class="media">src="media/fondo musical.mp3"</dt>
+        <dd>Este atributo especifica la URL del archivo de audio que se va a reproducir. En este caso, el archivo se llama "fondo musical.mp3" y está ubicado en una carpeta llamada "media".</dd>
+        
+        <dt class="media">controls</dt>
+        <dd>Este atributo agrega controles de reproducción estándar al reproductor de audio, como botones de reproducción, pausa y volumen.</dd>
+        
+        <dt class="media">preload</dt>
+        <dd>Este atributo indica al navegador que cargue el archivo de audio tan pronto como sea posible. El valor preload sin especificar (preload) generalmente significa que el navegador debe cargar el archivo de audio completamente antes de que comience la reproducción.</dd>
+      </dl>
+    <br>
+
+    <img src="img/Audio.PNG" alt="Audio">
+    <br>
+    <br>
+    <audio src="media/fondo musical.mp3" controls preload></audio>
+    <br>
+    <br>
+    <img src="img/Video.PNG" alt="Video">
+    <br>
+    <video src="media/Efecto explosión minecraft pantalla verde.mp4" controls preload poster="img/90.png"></video>
+    <hr>
+
+
+    <h2 id="parte18">Iframes</h2>
+
+    <br>
+    <p>La etiqueta &lt;iframe&gt; en HTML se utiliza para incrustar otro documento HTML dentro de la página actual. "iframe" significa "inline frame" (marco en línea) y se utiliza para mostrar contenido de otro origen, como una página web externa, un video de YouTube, un mapa de Google Maps, etc., dentro de la página web actual.</p>
+    p>Algunos casos de uso comunes de &lt;iframe&gt; incluyen incrustar contenido de otros sitios web, integrar contenido multimedia como videos o mapas, mostrar contenido de redes sociales, entre otros.</p>
+    <br>
+    <img src="img/Iframe.PNG" alt="iframe">
+    <br>
+    <br>
+    <iframe src="hola.html"></iframe>
+    <br>
+    <iframe src="https://chat.openai.com/"></iframe>
+    <br>
+    <iframe src="media/PATRICK ALEXANDER ALCANTARA SEDANO.pdf"></iframe>
+    <br>
+    <br>
+    <h4 style="color: blueviolet;">Como ponerlo en youtube?</h4>
+    <br>
+    <img src="img/Video de yotube.PNG" alt="video">
+    <br>
+    <br>
+
+    <p><strong class="media">&lt;iframe&gt;</strong>: Este es un elemento HTML que se utiliza para incrustar otro documento HTML dentro del documento actual. En este caso, se está utilizando para incrustar el reproductor de video de YouTube en la página.</p>
+
+    <p><strong class="media">width="560" height="315"</strong>: Estos atributos especifican el ancho y la altura del reproductor de video en píxeles.</p>
+
+    <p><strong class="media">src="https://www.youtube.com/embed/-oK6zL01fNM?si=dqskvrh-w5oZ3IhV"</strong>: Este es el atributo src que indica la URL del recurso incrustado. En este caso, es la URL del video de YouTube que se va a incrustar.</p>
+
+    <p><strong class="media">title="YouTube video player"</strong>: Este atributo proporciona un título para el reproductor de video incrustado.</p>
+
+    <p><strong class="media">frameborder="0"</strong>: Este atributo especifica si se debe mostrar un borde alrededor del reproductor de video. En este caso, se establece en 0 para que no haya ningún borde.</p>
+
+    <p><strong class="media">allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"</strong>: Este atributo especifica qué acciones y características están permitidas en el reproductor de video incrustado, como la reproducción automática, la escritura en el portapapeles, etc.</p>
+
+    <p><strong class="media">allowfullscreen</strong>: Este atributo permite que el reproductor de video se expanda a pantalla completa cuando el usuario lo solicita.</p>
+
+    <br>
+
+    <iframe 
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/-oK6zL01fNM?si=dqskvrh-w5oZ3IhV" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+    </iframe>
+    
+    <hr>
+
+
+    <h2 id="parte19"> Elementos de Formularios</h2>
+    <input type="">
+
+    <br>
+
+    <input type="checkbox">
+    <br>
+    <input type="radio">
+    <br>
+    <input type="date">
+    <br>
+    <input type="button" value="boton">
+    <br>
+    <input type="submit">
+    <br>
+    <input type="reset"> 
+    <br>
+    <input type="file" multiple>
+    <br>
+    <input type="hidden" name="idioma" value="es">
+    <br>
+    <input type="email">
+    <br>
+    <input type="number">
+    <br>
+    <input type="tel">
+    <br>
+    <input type="password">
+    <br>
+    <input type="search">
+    <br>
+    <h4>texarea y select</h4>
+    <textarea  cols="30" rows="10"></textarea>
+    <br>
+    <select name="" id="">
+        <option value="">html</option>
+        <option value="">css</option>
+        <option value="">js</option>
+    </select>
+    <br>
+    <select name="" id="" multiple>
+        <option value="">a;a</option>
+        <option value="">uwus</option>
+        <option value="">chi</option>
+    </select>
+    <br>
+
+    <h4>Mas Formulario</h4>
+    <input type="text"  value="patrickcomeresbueno" readonly disabled>
+    <br>
+    <input type="text" placeholder="Escribe aqui">
+    <br>
+    <hr>
+
+    <h2 id="parte20">Creando un formulario</h2>
+    <h4>Formulario de login</h4>
+    <br>
+    <form action="https://jonmircha.com/" method="post" autocomplete="on">
+        <label for="usuario1">usuario :</label>
+        <input type="text" name="usuario" id="usuario1" placeholder="Escribe tu usuario" required>
+        <br>
+        <label for="contrasena1">Contraena:</label>
+        <input type="password" name="contrasena" id="contrasena1" placeholder="aqui contrasena" required>
+
+        <br>
+        <input type="submit">
+        <br>
+        <input type="reset">
+        <br>
+        
+    </form>
+
+    <br>
+    <h3>Creacion del formulario</h3>
+    <form>
+        <p>Elige el idioma</p>
+        <select name="idioma" required>
+            <option value="es" selected>Elige una opcion</option>
+            <option value="en">espanol</option>
+            <option value="fr">ingles</option>
+            <option value="it">frances</option>
+            <option value="pt">italiano</option>
+        </select>
+
+        <br>
+        <p>Elige tu lenguajes de programacion favorite :</p>
+        <input type="radio" name="lenguaje" id="radio-js" required>
+        <label for="radio-js">javascrip</label>
+        <input type="radio" name="lenguaje" id="radio-py" checked>
+        <label for="radio-py">python</label>
+        <input type="radio" name="lenguaje" id="radio-j">
+        <label for="radio-j">java</label>
+        <br>
+        <p>Elige tus intereses</p>
+        <label>
+            <input type="checkbox" name="intereses" value="deportes">
+            deportes
+
+        </label>
+        <label>
+            <input type="checkbox" name="intereses" value="finanzas">
+            finanzas
+
+        </label>
+        <label>
+            <input type="checkbox" name="intereses" value="salud">
+            salud
+
+        </label>
+
+        <br>
+        <label>
+            <input type="checkbox" name="terminos" required>
+            Aceptas los termino y condiciones?
+        </label>
+        
+
+
+        <input type="submit" >
+        <input type="reset">
+    </form>
+
+    <br>
+    <h4> Formulario de contacto</h4>
+    <form action="https://formsubmit.co/patrickcomeresbueno@gmail.com" method="post">
+        <input type="text" name="nombre" placeholder="Escribe tu nombre" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" title="Nombre solo acpeta letras y espacios en blanco" required>
+        <input type="email" name="correo" placeholder="Escribe tu correo" pattern="^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$" title="Formato invalido" required>
+        <br>
+        <textarea name="comentarios" cols="30" rows="10" required></textarea>
+        <br>
+        <input type="submit">
+    </form>
+
+    <hr>
+    <h2 id="parte21">Data atributes</h2>
+    <ul>
+        <li data-id="1" data-name="spring">Primavera</li>
+        <li data-id="2" data-name="summer">Verano</li>
+        <li data-id="3" data-name="autumn">Otono</li>
+        <li data-id="4" data-name="winter">invierno</li>
+
+    </ul>
+    
+
+
+
+
+
+    
+    <script>console.log("Hola estamos aprendiendo Html")</script>
+    <script src="assets/codigos.js"></script>
+</body>
+</html>
