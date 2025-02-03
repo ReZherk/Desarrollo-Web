@@ -1,0 +1,1855 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curso de JavaScript</title>
+  </head>
+  <body>
+    <h1>Curso de JavaScript</h1>
+    <main>
+      <article>
+        <section>
+          <details>
+            <summary><h2>String</h2></summary>
+            <p>
+              Veremos las maneras de declarar un string (cadenas, palabras).
+            </p>
+            <br />
+            <ul>
+              <li>let nombre = "patrick"</li>
+              <li>let apellido ="alcantara"</li>
+              <li>
+                let saludo = new String("hola mundo")
+                <!-- Esta manera es muy formal. -->
+              </li>
+            </ul>
+            <p>PARA VISUALIZAR:</p>
+
+            <code style="color: green">
+              <pre>
+              console.log(nombre, apellido, saludo)<- Con esto se podrá observar en la consola.
+            </pre
+              >
+            </code>
+            <br />
+            <code style="color: green">
+              <pre>
+              console.log(nombre.length, apellido.length, saludo.length)<- El "length" nos permitirá ver el número de caracteres de la palabra, el espacio también cuenta.
+            </pre
+              >
+            </code>
+            <p>OTRAS METODOS QUE SE PUEDEN HACER CON EL STRING:</p>
+            <code style="color: red">
+              <pre>
+              console.log(nombre.toUpperCase());<- El "toUpperCase()" nos permite convertir las palabras a mayúsculas.
+            </pre
+              >
+            </code>
+
+            <code style="color: red">
+              <pre>
+              console.log(apellido.toLowerCase());<- El "toLowerCase()" nos permite convertir las palabras a minúsculas.
+            </pre
+              >
+            </code>
+
+            <code style="color: blue">
+              <pre>
+              console.log(saludo.includes("patrick"))<-El método "includes" también puede ser utilizado para comprobar si una cadena contiene una palabra especifica
+            </pre
+              >
+            </code>
+            <code style="color: blue">
+              <pre>
+              console.log(saludo.includes("hola"));<-El "includes()" nos permite ver si dentro dentro de la variable se encuentra una palabra.
+              </pre>
+            </code>
+            <code style="color: blueviolet">
+              <pre>
+              console.log(saludo.trim());<-El "trim()" nos permite eliminar los espacios demas.
+              </pre>
+            </code>
+            <code style="color: blueviolet">
+              <pre>
+              console.log(saludo.split());<-El "split()" nos permite elegir cual sera el identificador para que genere separaciones.
+              </pre>
+            </code>
+            <p>FORMAS DE CONCATENAR:</p>
+            <code>
+              <pre>
+                let nombres = "Patrick";
+                let apellidos = "Alcantara";
+              </pre>
+            </code>
+            <br />
+            <p>Concatenacion tradicional:</p>
+            <code style="color: royalblue">
+              <pre>
+                let saludos = "Hola mi nombre es" + nombres + "" + apellidos + ".";
+                console.log(saludos);<-Esto nos mostraria la union de lo escrito.
+              </pre>
+            </code>
+            <br />
+            <p>Interpolacion de variables:(Mas optimo)</p>
+
+            <code style="color: royalblue">
+              <pre>
+                let nombre1 = `Hola mi nombre es ${nombres} ${apellidos}`;
+                console.log(nombre1);<-Nos debe mostra la union.
+              </pre>
+            </code>
+            <p>COMO MANTENER LA FORMA DEL CODIGO:</p>
+            <code style="color: blue">
+              <pre>
+    let codigo = `
+      &lt;ul&gt;
+         &lt;li&gt;primavera&lt;/li&gt;
+         &lt;li&gt;verano&lt;/li&gt;
+         &lt;li&gt;otoño&lt;/li&gt;
+         &lt;li&gt;invierno&lt;/li&gt;
+      &lt;/ul&gt;`;
+      console.log(codigo);<-Gracias a " `` " podemos asigna un valor de una manera preformateada, tipo uan etiqueta "pre".
+
+              </pre>
+            </code>
+          </details>
+        </section>
+
+        <!-- ******************************************************************************************************* -->
+
+        <section>
+          <details>
+            <summary><h2>Numbers</h2></summary>
+            <code>
+              <pre>
+      let a = 1;
+      let b = new Number(2);
+      let c = 7.19;
+      console.log(a, b);
+       
+               </pre
+              >
+            </code>
+            <h4>Metodos para el Numbers</h4>
+            <code>
+              <pre style="color: blue">
+        console.log(c.toFixed(5));<-El "toFixed()", lo que esta dentro del parentesis nos permite saber el numero de decimales mostrados.
+              </pre>
+            </code>
+            <code>
+              <pre style="color: red">
+   
+        console.log(parseInt(c));<-El "parseInt(*)" nos permite convertir una cadena en un numero.
+        EJEMPLO:
+        -parseInt("33.4") = Devolvera " 33" ,osea el entero, pero si
+        al principio de la cadena hay letentonces nos devolvera "NaN" al no encontrar al princio numeros.       
+              </pre>
+            </code>
+
+            <code>
+              <pre style="color: blue">
+        console.log(parseFloat(c));<-El "parseFloat()" a diferencia del parseInt, este
+        si convierte una cadena a un numero con todos sus decimales.
+              </pre>
+            </code>
+            <h4>Como saber que tipo de elemento es un objeto?</h4>
+            <code>
+              <pre style="color: green">
+                console.log(typeof c, typeof d);<-El "typeof" nos permite saber si un elemento es un cadena o un number.
+              </pre>
+            </code>
+            <h4>Como sumar en la consola?</h4>
+            <code>
+              <pre style="color: red">
+      console.log(a + b);
+      console.log(c + parseInt(d));<-Usamos el "parseInt" para convertir en numero a la cadena.
+      console.log(c + parseFloat(d));<-Usamos el "parseFloat" para que se convierta en numero con decimales una cadena.
+      UNA FORMA FORMAL:
+      console.log(c + Number.parseInt(d));
+      console.log(c + Number.parseFloat(d));
+              </pre>
+            </code>
+          </details>
+        </section>
+
+        <!-- ***************************************************************************************************** -->
+
+        <section>
+          <details>
+            <summary><h2>Boolean</h2></summary>
+            <code style="color: brown">
+              <pre>
+                <u>Formas de crear un Boolean</u>
+      let verdadero = true;
+      let falso = false;
+      let v = Boolean(true);
+      let u = Boolean(false);
+              </pre>
+            </code>
+
+            <code style="color: rebeccapurple">
+              <pre>
+                <U>VERIFICAR QUE ES UN Boolean</U>
+                console.log(typeof v, typeof u);
+              </pre>
+            </code>
+
+            <code>
+              <pre>
+                <u>VISUALIZACION</u>
+      console.log(verdadero, falso);
+      console.log(v, u);
+              </pre>
+            </code>
+            <p>
+              Existen valores que se acercan tanto a lo verdadero o falso,
+              <br />
+              alguno de ellos son:
+              <code style="color: green">
+                <pre>
+      console.log(Boolean(0));<-Es falso
+      console.log(Boolean(-7));<-Es verdadero
+      console.log(Boolean(""));<-Es falso
+      console.log(Boolean(" "));<-Es verdadero
+                </pre>
+              </code>
+            </p>
+            <small
+              ><p>
+                Nota:
+                <br />
+                Para saber mas de estos,revisar la documentaciond de MDN web
+                docs.
+              </p></small
+            >
+          </details>
+        </section>
+
+        <!-- **************************************** -->
+
+        <section>
+          <details>
+            <summary><h2>Undefined,null,NaN</h2></summary>
+
+            <u><h3>Undefined</h3></u>
+            <p style="color: brown">
+              Undefined indica que no se ha inicializado una variable y que el
+              <br />
+              valor esta ausente.
+            </p>
+            <code style="color: forestgreen">
+              <pre>
+              let indefinida;
+              console.log(indefinida)=>Me dara como respuesta de la consola una indefined.
+            </pre
+              >
+            </code>
+
+            <hr />
+            <u><h3>null</h3></u>
+            <p style="color: brown">
+              Null es un valor especial que indica la ausencia de un valor.
+            </p>
+            <code style="color: green">
+              <pre>
+                let nulo= null;
+                console.log(null);
+              </pre>
+            </code>
+
+            <hr />
+
+            <h3><u>NaN</u></h3>
+            <p style="color: brown">
+              NaN- Not a Number.Este aparece cuando se realiza operaciones
+              <br />
+              matematicas o uso de metodos que tenga que ver con "Numbers"
+            </p>
+            <code style="color: forestgreen">
+              <pre>
+                let noEsUnNumero ="hola" * 3.7;
+                console.log(noEsUnNumero);
+              </pre>
+            </code>
+          </details>
+        </section>
+
+        <section>
+          <details>
+            <summary><h2>Function</h2></summary>
+
+            <h3 style="color: orangered">Que es una Function?</h3>
+            <p style="color: brown">
+              Una funcion es un bloque de codigo,autocontenido, que se puede
+              <br />
+              definir una vez y ejecutar en cualquier momento. Opcionalmente,una
+              <br />
+              funcion puede aceptar parametros y devolver un valor.
+              <br />
+              <br />
+              Las funciones en javaScript son objetos,un tipo especial de
+              <br />
+              objetos:
+              <br />
+              Se dice que las funciones son ciudadanos de primera clase porque
+              <br />
+              pueden asignarse a un valor,y pueden pasarse como argumentps y
+              <br />
+              usarse como un valor de retorno.
+            </p>
+
+            <h4><u style="color: red">Forma de declarar una funcion </u></h4>
+            <code style="color: green">
+              <pre>
+      function estoEsUnaFuncion() {
+        console.log("uno");
+        console.log("dos");
+        console.log("tres");
+      }
+              </pre>
+            </code>
+
+            <h4><u>Invocar la function </u></h4>
+            <code style="color: green">
+              <pre>
+                estoEsUnaFuncion();
+              </pre>
+            </code>
+
+            <h4>Como retorna una función (return)</h4>
+            <code>
+              <pre style="color: green">
+        function unaFuncionQueDevuelveValor() {
+            console.log("uno");
+            console.log("dos");
+            console.log("tres");
+            <span style="color: gray;">// Se añade un comentario para explicar el retorno de la función</span>
+            return "La función ha retornado una cadena de texto";
+        }
+      
+        <span style="color: gray;">// Para visualizar el retorno de la función, asignamos el resultado a una variable y lo imprimimos en la consola</span>
+        let valorDeFuncion = unaFuncionQueDevuelveValor();
+        console.log(valorDeFuncion);
+    </pre>
+
+              <pre>
+        <small style="color: brown;">
+            <p>Nota:
+                <br>
+                Si después de un return existen más elementos que se deben ejecutar, estos no lo harán.
+                <br>
+                Ejemplo:
+            </p>
+        </small>
+        function unaFuncionQueDevuelveValor() {
+            console.log("uno");
+            <span style="color: gray;">// Se añade un comentario para explicar el retorno de la función</span>
+            return 19;
+            <span style="color: gray;">// El siguiente código después del return no se ejecutará</span>
+            console.log("dos"); <span style="color: gray;">// Esto no se ejecutará.</span>
+            console.log("tres"); <span style="color: gray;">// Esto no se ejecutará.</span>
+            return "La función ha retornado una cadena de texto"; <span style="color: gray;">// Esto no se ejecutará.</span>
+        }
+    </pre>
+            </code>
+
+            <h4 style="color: orange"><u>Parametros</u></h4>
+            <p>Esta es la forma de asignar parametros a una funcion.</p>
+
+            <code style="color: green">
+              <pre>
+              function saludar(nombre, edad) {
+                console.log(`Hola mi nombre es ${nombre} y tengo ${edad} anos.`);
+              }
+        
+              saludar("Patrick", 21);
+              saludar();<span style="color: gray;">Si no asignamos valores, lo que nos respondera la consola sera undefined
+                Para evitar esto debemos darle valores iniciales a las parametros de la funcion.("nombre" " edad")
+              </span>
+              </pre>
+            </code>
+
+            <h4><u>Como funciona JavaScript con las funciones. </u></h4>
+            <p style="color: brown">
+              Cuando declaramos una funcion no importa donde se declarada la
+              <br />
+              funcion,despues de ser declarada, esta puede ser invocada donde
+              <br />
+              sea.
+            </p>
+            <code>
+              <pre>
+                funcionDeclarada();
+          
+                function funcionDeclarada() {
+                  console.log(
+                    "Esto es una funcion declarada,puede invocarse en cualquier parte de nuestro codigo, incluso antes de que la funcion sea declarada."
+                  );
+                }
+          
+                funcionDeclarada();
+              </pre>
+            </code>
+
+            <p style="color: brown">
+              Pero tambien tenemos las funciones anonimas, en donde si importa
+              <br />
+              donde es declarada la funcion.Usaremos "const" cuando a una
+              <br />
+              variable le asignemos una funcion(function).(ESTO ES UNA BUENA
+              PRACTICA)
+            </p>
+
+            <code>
+              <pre>
+
+                funcionExpresada();<span style="color: gray;">Aqui no podria ir, por que nos daria error.</span>  
+
+                const funcionExpresada = function () {
+                console.log(
+                    "Ësto es una funcion expresada, es decir, una funcion que se le ha asignado como valor a una variable, si invocamos esta funcion antes de su definicion JS nos dira `Cannot access 'funcionExpresada' defore initialization.`"
+                  );
+                };
+                funcionExpresada();
+              </pre>
+            </code>
+          </details>
+        </section>
+        <section>
+          <details>
+            <summary><h2>Arrays</h2></summary>
+            <h4><u>Como se definen los arreglos?</u></h4>
+            <p style="color: maroon">
+              Se debe usar como buena practica para darle a una variable el
+              valor de un arreglo el tipo "const".
+            </p>
+
+            <code style="color: green">
+              <pre>
+               const z = [];
+               const y = [1, true, "Hola", ["A", "B", "C", [1, 2, 3]]];
+         
+               console.log(z);<span style="color: gray;"><=Nos devolvera que el arreglo tiene cero elementos.</span>
+               console.log(y);<span style="color: gray;"><=El arreglo tiene 4 elementos,en los cuales se empieza a contar desde el 0,1,2,3.......</span>
+              </pre>
+            </code>
+
+            <h4><u>Como llamar a las partes de un arreglo?</u></h4>
+
+            <p style="color: brown">
+              Para realizar esta accion primero pondremos la variable del
+              <br />
+              arreglo y seguidamente "[]" dentro los [] debe estar la posicion
+              <br />
+              de la parte que desea llamar.
+            </p>
+
+            <code style="color: green">
+              <pre>
+                        console.log(y[2]);<span style="color: gray;"><=Nos vota hola.</span>
+                        console.log(y[0]);<span style="color: gray;"><=Nos vota 1.</span>
+                        console.log(y[3]);<span style="color: gray;"><=Nos vota ["A", "B", "C", [1, 2, 3]].</span>
+              </pre>
+            </code>
+
+            <h4><u>Como llamar a las subpartes?</u></h4>
+            <p style="color: brown">
+              Para hacer eso primero debemos ubicarnos dentro de una parte y
+              <br />
+              luego hacer lo mismo dentro de esa subparte si ubiera mas
+              <br />
+              subpartes.
+            </p>
+
+            <code style="color: green">
+              <pre>
+                          console.log(y[3][2]);<span style="color: gray;"><=Me devuelve "c"</span>
+                          console.log(y[3][3][0]);<span style="color: gray;"><=Me devuelve 1.</span>
+            </pre>
+            </code>
+
+            <h4><u>Metodos de arrays</u></h4>
+
+            <code>
+              <pre>
+                    const x = Array.of("x", "y", "z", 9, 8, 7); <span style="color: gray;"><=Es una forma de crear un nuevo arreglo.</span>
+                    console.log(x);
+              </pre>
+            </code>
+            <code>
+              <pre>
+                    const w = Array(40).fill(true);<span><=El "Array(40)" indica que se crea una arreglo con 40
+                    espacios y el "fill(true)" indica con que sera llenado esos espacios.</span>
+                    console.log(w);
+              </pre>
+            </code>
+
+            <code>
+              <pre>
+                    colores.push("Negro");<span><=Nos permite agregar contenido al arreglo.</span>
+                    console.log(colores);
+              </pre>
+            </code>
+
+            <code>
+              <pre>
+                    colores.pop();<span><=Nos permite eliminar el ultimo agregado al arreglo.</span>
+                    console.log(colores);
+              </pre>
+            </code>
+          </details>
+        </section>
+        <section>
+          <details>
+            <summary><h2>Objetos</h2></summary>
+            <h4 style="color: cadetblue"><u>Que es un Objeto?</u></h4>
+            <div>
+              Imagina un objeto en JavaScript como una caja mágica donde puedes
+              <br />
+              guardar todo tipo de cosas: desde tu nombre y edad hasta tus
+              <br />
+              hobbies favoritos e incluso las cosas que puedes hacer, como
+              <br />
+              saludar a alguien.
+              <br />
+              <br />
+              <br />
+              <p style="color: brown">
+                *Propiedades: Son como etiquetas dentro de la caja que te ayudan
+                a
+                <br />
+                organizar tus cosas. Por ejemplo, podrías tener una etiqueta que
+                <br />
+                dice "nombre" y otra que dice "edad", y en cada una de ellas
+                <br />
+                guardas la información correspondiente. También puedes tener
+                <br />
+                etiquetas para cosas más interesantes, como "saludar", que
+                guarda
+                <br />
+                una función que te permite decir "¡Hola!".
+              </p>
+              <br />
+              <br />
+              <br />
+              *Métodos: Son como acciones especiales que puedes hacer con las
+              <br />
+              cosas dentro de la caja. Por ejemplo, si tienes una etiqueta
+              <br />
+              llamada "saludar" que guarda una función, puedes usarla para decir
+              <br />
+              "¡Hola!" en cualquier momento.
+            </div>
+
+            <code>
+              <pre style="color: green">
+                <h5 style="color: blue;">DECLARACION DE UN OBJETO</h5>
+      const j = {};
+      console.log(j);
+
+      const k = new Object();
+      console.log(k);
+
+      <h5 style="color: blue;">PARTES DE UN OBJETO(propiedades)</h5>
+<span style="color: black;">Declaracion =></span>const jesus = {
+        nombre: "jesus",
+        apellido: "esquives",
+        edad: 35,
+        pasatiempos: ["corre", "hacer ejercicio", "dar clases"], <span style="color:black;"><=Lleva un array.</span>
+        soltero: true,
+        contacto: { <span style="color: black;"><=Dentro del objeto hay otro objeto.</span>
+          gmail: "patrickcomeresbueno@gmail.com",
+          movil: "934008679",
+          twitter: "apotheddy",
+        },
+
+        saludar: function () {<span style="color: black;"><=Lleva una funcion dentro del objeto.</span>
+          console.log(`hola :)`);
+        },
+<p style="color: rebeccapurple;">
+  En esta funcion estamos usando el metodo "this", que nos permite referirnos a los 
+  propiedades que estan dentro del objeto para poder ser usadas en la funcion.
+</p>
+        decirMiNombre: function () {
+          console.log(
+            `Hola me llamo ${this.nombre} ${this.apellido} y tengo ${this.edad} anos y me puedes seguir como ${this.contacto.twitter}`
+          );
+        },
+      };
+
+      <h5 style="color: blue;">RESULTADOS</h5>
+
+      <H4 style="color: red;">Llamando un objeto</H4>
+      console.log(jesus);
+      <h4 style="color: red;">Llamando una propiedad del objeto</h4>
+      console.log(jesus["nombre"]);
+      console.log(jesus["apellido"]);
+      <h4 style="color: red;">Forma optima de llamar a una propiedad</h4>
+      console.log(jesus.nombre);
+      console.log(jesus.apellido);
+      console.log(jesus.edad);
+      console.log(jesus.soltero);
+      <h4 style="color: red;">Forma de llamar a uno de los elementos del arreglo que esta dentro de un objeto.</h4>
+      console.log(jesus.pasatiempos);
+      console.log(jesus.pasatiempos[1]);
+      <h4 style="color: red;">Llamar a un objeto dentro de otro objeto</h4>
+      console.log(jesus.contacto);
+      console.log(jesus.contacto.gmail);
+
+      <h4 style="color: red;">Invocar una funcion de un objeto</h4>
+      jesus.saludar();
+      jesus.decirMiNombre();
+      
+      <h3>Algunos metodos </h3>
+
+      console.log(Object.keys(jesus));
+      console.log(Object.values(jesus));
+      console.log(jesus.hasOwnProperty("nombre"));
+      console.log(jesus.hasOwnProperty("nacimiento"));
+              </pre>
+            </code>
+          </details>
+        </section>
+
+        <section>
+          <details>
+            <summary>
+              <h2>Tipos de operadores</h2>
+            </summary>
+            <h3 style="color: orangered">Que operadores tenemos?</h3>
+            <p>
+              <b>**Operadores aritméticos**</b>: Se utilizan para realizar
+              operaciones matemáticas básicas.
+              <br />
+              <br />
+              * `+`: Suma dos valores.
+              <br />
+              * `-`: Resta el segundo valor del primero.
+              <br />
+              * `*`: Multiplica dos valores.
+              <br />
+              * `/`: Divide el primer valor por el segundo.
+              <br />
+              * `%`: Devuelve el resto de una división (operador módulo).
+            </p>
+
+            <p>EJEMPLO:</p>
+
+            <code>
+              <pre>
+      let l = 5 + (5 - 5) * 3;
+      let division = 5 / 2;
+      let modulo = 5 % 2;
+
+      console.log(l);<span style="color: blue;"><=Devuelve 5</span>
+      console.log(division);<span style="color: blue;"><=Devuelve 2.5</span>
+      console.log(modulo);<span style="color: blue;"><=Devuelve 1</span>
+              </pre>
+            </code>
+            <span style="color: brown"
+              >Nota:Al igual que en las matematicas los parentesis tiene mayor
+              jerarquía.</span
+            >
+
+            <br />
+            <p>
+              <strong>Operadores de comparación</strong>: Se utilizan para
+              comparar dos valores y devolver un valor booleano (<code
+                >true</code
+              >
+              o <code>false</code>).
+            </p>
+
+            <br />
+
+            <ul>
+              <li><code>==</code>: Compara si dos valores son iguales.</li>
+              <li><code>!=</code>: Compara si dos valores son diferentes.</li>
+              <li>
+                <code>===</code>: Compara si dos valores son iguales en valor y
+                tipo (estrictamente iguales).
+              </li>
+              <li>
+                <code>!==</code>: Compara si dos valores son diferentes en valor
+                o tipo (estrictamente diferentes).
+              </li>
+              <li>
+                <code>></code>: Compara si el primer valor es mayor que el
+                segundo.
+              </li>
+              <li>
+                <code><</code>: Compara si el primer valor es menor que el
+                segundo.
+              </li>
+              <li>
+                <code>>=</code>: Compara si el primer valor es mayor o igual que
+                el segundo.
+              </li>
+              <li>
+                <code><=</code>: Compara si el primer valor es menor o igual que
+                el segundo.
+              </li>
+            </ul>
+
+            <h3><strong style="color: blue">Valores unarios</strong></h3>
+            <br />
+            <p><strong>Operador de incremento (`++`)</strong>:</p>
+
+            <ul style="background-color: bisque">
+              <li>
+                El operador de incremento (`++`) aumenta el valor de una
+                variable en uno.
+              </li>
+              <li>
+                Se puede colocar antes (`++variable`) o después (`variable++`)
+                del nombre de la variable.
+              </li>
+              <li>
+                Si se coloca antes (`++variable`), primero se incrementa el
+                valor de la variable y luego se utiliza en la expresión.
+              </li>
+              <li>
+                Si se coloca después (`variable++`), primero se utiliza el valor
+                actual de la variable en la expresión y luego se incrementa.
+              </li>
+            </ul>
+
+            <p>EJEMPLO:</p>
+
+            <pre>
+let contador = 0;
+let resultado1 = ++contador; // Incrementa contador a 1 y luego asigna 1 a resultado1
+let resultado2 = contador++; // Asigna el valor actual de contador (1) a resultado2 y luego incrementa contador a 2
+
+            </pre>
+
+            <hr />
+
+            <p><strong>Operador de decremento (`--`)</strong>:</p>
+
+            <ul style="background-color: bisque">
+              <li>
+                El operador de decremento (`--`) disminuye el valor de una
+                variable en uno.
+              </li>
+              <li>
+                Al igual que con el operador de incremento, se puede colocar
+                antes (`--variable`) o después (`variable--`) del nombre de la
+                variable.
+              </li>
+              <li>
+                El comportamiento con respecto a la posición del operador es el
+                mismo que con el operador de incremento.
+              </li>
+            </ul>
+
+            <p>EJEMPLO:</p>
+            <pre>
+let contador = 0;
+let resultado1 = --contador; // Decrementa contador a -1 y luego asigna -1 a resultado1
+let resultado2 = contador--; // Asigna el valor actual de contador (-1) a resultado2 y luego decrementa contador a -2
+
+            </pre>
+
+            <hr />
+
+            <p><strong>Operador `+=` (suma y asignación)</strong>:</p>
+
+            <br />
+
+            <ul style="background-color: bisque">
+              <li>
+                El operador `+=` se utiliza para incrementar el valor de una
+                variable sumándole otro valor y luego asignando el resultado a
+                la misma variable.
+              </li>
+              <li>
+                La sintaxis es `variable += valor`, donde `variable` es la
+                variable a la que se le asignará el resultado de la suma, y
+                `valor` es el valor que se sumará a la variable.
+              </li>
+              <li>Es equivalente a escribir `variable = variable + valor`.</li>
+            </ul>
+
+            <p>EJEMPLO:</p>
+
+            <pre>
+let numero = 5;
+
+numero += 3; // Equivalente a: numero = numero + 3
+
+// Ahora numero es 8
+</pre
+            >
+
+            <hr />
+
+            <p><strong>Operador `-=` (resta y asignación)</strong>:</p>
+
+            <br />
+
+            <ul style="background-color: bisque">
+              <li>
+                El operador `-=` se utiliza para decrementar el valor de una
+                variable restando otro valor y luego asignando el resultado a la
+                misma variable.
+              </li>
+              <li>
+                La sintaxis es `variable -= valor`, donde `variable` es la
+                variable a la que se le asignará el resultado de la resta, y
+                `valor` es el valor que se restará de la variable.
+              </li>
+              <li>Es equivalente a escribir `variable = variable - valor`.</li>
+            </ul>
+
+            <p>EJEMPLO:</p>
+
+            <pre>
+let numero = 10;
+
+numero -= 4; // Equivalente a: numero = numero - 4
+
+// Ahora numero es 6
+</pre
+            >
+
+            <hr />
+
+            <p>
+              <strong>Operadores lógicos</strong>: Se utilizan para realizar
+              operaciones lógicas entre valores booleanos.
+            </p>
+
+            <ul style="background-color: bisque">
+              <li>
+                `&&`: Operador AND. Devuelve `true` si ambos operandos son
+                `true`.
+              </li>
+              <li>
+                `||`: Operador OR. Devuelve `true` si al menos uno de los
+                operandos es `true`.
+              </li>
+              <li>
+                `!`: Operador NOT. Devuelve el valor opuesto del operando
+                booleano.
+              </li>
+            </ul>
+            <p>EJEMPLO:</p>
+          </details>
+        </section>
+
+        <section>
+          <details>
+            <summary><h2>Condicionales</h2></summary>
+            <h3>Que es un if-else</h3>
+            <p>
+              Es una estructura de datos que funcion con un true o un false.
+            </p>
+            <code>
+              <pre>
+                let edad = 17;
+              if(edad>17){
+                console.log("Eres mayor de edad");
+              }else{
+                console.log("Eres menor de edad");
+              }
+                <Span style="color: rebeccapurple">TODO ESTO ME DEBE DEVOLVER QUE NO ES MAYOR DE EDAD.</Span>
+              </pre>
+            </code>
+
+            <h4><u>Operador Ternario</u></h4>
+            <p>
+              Es una forma mas abreviada que escribir el if-else,se usa solo
+              cuando tienes una condicion que deseas que se cumpla.
+            </p>
+
+            <p style="color: brown">EJEMPLO</p>
+            <code style="color: green">
+              <pre>
+                (CONDICION) ? "SI SE CUMPLE QE ES VERDADERO" : "SI NO ES VERDADERO LA CONDICION"
+              </pre>
+            </code>
+
+            <code>
+              <pre>
+                let nombre ="Patrick";
+                
+                let persona =(nombre == "Patrick") ? "Tu eres patrick" : "Tu no eres patrick"
+console.log(persona); <span style="color: gray;"><= Esto me devolvera que soy patrick, pero si en nombre esta otro nombre,
+ entonces devolvera falso la condicion, entonces me devolvera que "Tu no eres patrick."</span>
+              </pre>
+            </code>
+            <h4><u>Switch</u></h4>
+            <p>
+              Es una estructura de control que permite evaluar una expresión y
+              ejecutar diferentes bloques de código según el valor de esa
+              expresión. Es útil cuando tienes múltiples condiciones basadas en
+              un solo valor.
+            </p>
+
+            <p style="color: brown">EJEMPLO</p>
+            <code style="color: green">
+              <pre>
+    switch(EXPRESION) {
+      case VALOR1:
+        // Código si la expresión coincide con VALOR1
+        break;
+      case VALOR2:
+        // Código si la expresión coincide con VALOR2
+        break;
+      default:
+        // Código si no coincide con ningún caso
+    }
+  </pre
+              >
+            </code>
+
+            <code>
+              <pre>
+    let dia = "Lunes";
+
+    switch (dia) {
+      case "Lunes":
+        console.log("Hoy es lunes, inicio de semana.");
+        break;
+      case "Viernes":
+        console.log("Hoy es viernes, casi fin de semana.");
+        break;
+      case "Sábado":
+      case "Domingo":
+        console.log("Es fin de semana, ¡a descansar!");
+        break;
+      default:
+        console.log("Es un día normal de la semana.");
+    }
+    <span style="color: gray;">
+      <= Si "dia" es "Lunes", me devolverá "Hoy es lunes, inicio de semana."
+      Si cambio el valor a "Viernes", el mensaje será "Hoy es viernes, casi fin de semana."
+      Para "Sábado" o "Domingo", el resultado será "Es fin de semana, ¡a descansar!"
+      Si no coincide con ninguno, mostrará "Es un día normal de la semana."
+    </span>
+  </pre>
+            </code>
+          </details>
+        </section>
+        <section>
+          <details>
+            <summary><h2>Ciclos</h2></summary>
+            <h3>While</h3>
+            <p>
+              El ciclo <code>while</code> repite un bloque de código mientras
+              una condición sea verdadera.
+            </p>
+            <p style="color: brown">EJEMPLO</p>
+            <code style="color: green">
+              <pre>
+      let i = 0;
+
+      while (i < 5) {
+        console.log("El número es: " + i);
+        i++;
+      }
+      <span style="color: gray;">
+        <= Este ciclo imprimirá los números del 0 al 4 mientras i sea menor que 5.
+      </span>
+    </pre>
+            </code>
+
+            <h3>Do-While</h3>
+            <p>
+              El ciclo <code>do-while</code> ejecuta el bloque de código al
+              menos una vez, incluso si la condición es falsa.
+            </p>
+            <p style="color: brown">EJEMPLO</p>
+            <code style="color: green">
+              <pre>
+      let i = 0;
+
+      do {
+        console.log("El número es: " + i);
+        i++;
+      } while (i < 3);
+      <span style="color: gray;">
+        <= Este ciclo imprimirá los números del 0 al 2. La condición se evalúa al final.
+      </span>
+    </pre>
+            </code>
+            <hr />
+            <h3>For</h3>
+            <p>
+              El ciclo <code>for</code> se usa cuando conoces de antemano
+              cuántas veces deseas repetir un bloque de código.
+            </p>
+            <p style="color: brown">EJEMPLO</p>
+            <code style="color: green">
+              <pre>
+      for (let i = 0; i < 3; i++) {
+        console.log("El número es: " + i);
+      }
+      <span style="color: gray;">
+        <= Este ciclo imprimirá los números del 0 al 2.
+      </span>
+    </pre>
+            </code>
+
+            <h3>For...in</h3>
+            <p>
+              El ciclo <code>for...in</code> itera sobre las propiedades
+              enumerables de un objeto (o índices de un arreglo).
+            </p>
+            <p style="color: brown">EJEMPLO</p>
+            <code style="color: green">
+              <pre>
+      let persona = { nombre: "Patrick", edad: 25 };
+
+      for (let propiedad in persona) {
+        console.log(propiedad + ": " + persona[propiedad]);
+      }
+      <span style="color: gray;">
+        <= Este ciclo imprimirá "nombre: Patrick" y "edad: 25".
+      </span>
+    </pre>
+            </code>
+
+            <h3>For...of</h3>
+            <p>
+              El ciclo <code>for...of</code> se utiliza para recorrer elementos
+              de objetos iterables como arreglos, cadenas, etc.
+            </p>
+            <p style="color: brown">EJEMPLO</p>
+            <code style="color: green">
+              <pre>
+      let numeros = [1, 2, 3];
+
+      for (let numero of numeros) {
+        console.log(numero);
+      }
+      <span style="color: gray;">
+        <= Este ciclo imprimirá los números: 1, 2 y 3.
+      </span>
+    </pre>
+            </code>
+
+            <h3>ForEach</h3>
+            <p>
+              El método <code>forEach</code> ejecuta una función para cada
+              elemento de un arreglo.
+            </p>
+            <p style="color: brown">EJEMPLO</p>
+            <code style="color: green">
+              <pre>
+      let numeros = [10, 20, 30];
+
+      numeros.forEach((numero) => {
+        console.log("Número: " + numero);
+      });
+      <span style="color: gray;">
+        <= Este ciclo imprimirá "Número: 10", "Número: 20" y "Número: 30".
+      </span>
+    </pre>
+            </code>
+          </details>
+        </section>
+
+        <section>
+          <details>
+            <summary><h2>Try-Catch-Finally</h2></summary>
+            <p>
+              La estructura <code>try-catch-finally</code> se utiliza para
+              manejar errores en tiempo de ejecución. Permite intentar ejecutar
+              un bloque de código y capturar errores si ocurren.
+            </p>
+            <p style="color: brown">EJEMPLO</p>
+            <code style="color: green">
+              <pre>
+      try {
+        let resultado = 10 / 0; // División por cero
+        console.log("El resultado es: " + resultado);
+      } catch (error) {
+        console.log("Ocurrió un error: " + error.message);
+      } finally {
+        console.log("Bloque finally: Esto siempre se ejecuta.");
+      }
+      <span style="color: gray;">
+        <= Este ejemplo imprimirá el resultado de la división (Infinity), no se generará un error real, pero el bloque finally siempre se ejecuta.
+      </span>
+    </pre>
+            </code>
+            <hr />
+
+            <h2>Creación de Errores Personalizados con throw</h2>
+            <p>
+              Con <code>throw</code> puedes lanzar tus propios errores
+              personalizados. Es útil cuando deseas manejar situaciones
+              específicas en tu código.
+            </p>
+            <p style="color: brown">EJEMPLO</p>
+            <code style="color: green">
+              <pre>
+      function dividir(a, b) {
+        if (b === 0) {
+          throw new Error("No se puede dividir por cero.");
+        }
+        return a / b;
+      }
+
+      try {
+        let resultado = dividir(10, 0); // Esto lanzará un error
+        console.log("El resultado es: " + resultado);
+      } catch (error) {
+        console.log("Error: " + error.message);
+      } finally {
+        console.log("Bloque finally: Fin del programa.");
+      }
+      <span style="color: gray;">
+        <= Este ejemplo lanzará un error con el mensaje "No se puede dividir por cero" y el bloque finally se ejecutará al final.
+      </span>
+    </pre>
+            </code>
+          </details>
+        </section>
+        <section>
+          <details>
+            <summary><h2>Break y Continue</h2></summary>
+            <h3>Break</h3>
+            <p>
+              La instrucción <code>break</code> se utiliza para salir
+              inmediatamente de un bucle o una estructura de control (como un
+              <code>switch</code>), interrumpiendo su ejecución antes de que
+              finalice normalmente.
+            </p>
+            <p style="color: brown">EJEMPLO</p>
+            <code style="color: green">
+              <pre>
+      for (let i = 1; i <= 10; i++) {
+        if (i === 5) {
+          break; // Sale del bucle cuando i es igual a 5
+        }
+        console.log("Número: " + i);
+      }
+      <span style="color: gray;">
+        <= Este ejemplo imprimirá los números del 1 al 4. Cuando <code>i</code> sea igual a 5, el bucle se interrumpirá y no continuará.
+      </span>
+      </pre>
+            </code>
+            <hr />
+
+            <h3>Continue</h3>
+            <p>
+              La instrucción <code>continue</code> se utiliza para omitir la
+              iteración actual de un bucle y pasar a la siguiente, sin
+              interrumpir el bucle completamente.
+            </p>
+            <p style="color: brown">EJEMPLO</p>
+            <code style="color: green">
+              <pre>
+      for (let i = 1; i <= 10; i++) {
+        if (i % 2 === 0) {
+          continue; // Omite los números pares
+        }
+        console.log("Número impar: " + i);
+      }
+      <span style="color: gray;">
+        <= Este ejemplo imprimirá solo los números impares del 1 al 10, ya que los números pares serán omitidos por el <code>continue</code>.
+      </span>
+      </pre>
+            </code>
+            <hr />
+          </details>
+        </section>
+
+        <section>
+          <details>
+            <summary><h2>Desestructuración</h2></summary>
+            <h3>¿Qué es la Desestructuración?</h3>
+            <p>
+              La desestructuración es una característica de JavaScript que
+              permite extraer valores de arreglos o propiedades de objetos en
+              variables individuales de manera sencilla.
+            </p>
+            <hr />
+
+            <h3>Desestructuración de Arreglos</h3>
+            <p>
+              Con la desestructuración de arreglos, puedes asignar elementos de
+              un arreglo a variables en una sola línea.
+            </p>
+            <p style="color: brown">EJEMPLO</p>
+            <code style="color: green">
+              <pre>
+      const numeros = [1, 2, 3, 4];
+
+      const [a, b, c] = numeros; // Asigna 1, 2 y 3 a las variables a, b y c
+
+      console.log(a); // 1
+      console.log(b); // 2
+      console.log(c); // 3
+      <span style="color: gray;">
+        <= Este ejemplo asigna los tres primeros valores del arreglo <code>numeros</code> a las variables <code>a</code>, <code>b</code> y <code>c</code>.
+      </span>
+      </pre>
+            </code>
+            <hr />
+
+            <h3>Desestructuración de Objetos</h3>
+            <p>
+              Con la desestructuración de objetos, puedes asignar propiedades de
+              un objeto a variables con el mismo nombre que las propiedades.
+            </p>
+            <p style="color: brown">EJEMPLO</p>
+            <code style="color: green">
+              <pre>
+      const persona = {
+        nombre: "Juan",
+        edad: 30,
+        pais: "México"
+      };
+
+      const { nombre, edad } = persona;
+
+      console.log(nombre); // Juan
+      console.log(edad); // 30
+      <span style="color: gray;">
+        <= Este ejemplo extrae las propiedades <code>nombre</code> y <code>edad</code> del objeto <code>persona</code> y las asigna a variables con el mismo nombre.
+      </span>
+      </pre>
+            </code>
+            <hr />
+
+            <h3>Desestructuración con Valores Predeterminados</h3>
+            <p>
+              Puedes asignar valores predeterminados en caso de que la propiedad
+              o el elemento no exista.
+            </p>
+            <p style="color: brown">EJEMPLO</p>
+            <code style="color: green">
+              <pre>
+      const persona = {
+        nombre: "Juan"
+      };
+
+      const { nombre, edad = 25 } = persona;
+
+      console.log(nombre); // Juan
+      console.log(edad); // 25 (valor predeterminado)
+      <span style="color: gray;">
+        <= Este ejemplo asigna el valor predeterminado <code>25</code> a <code>edad</code> porque no existe en el objeto <code>persona</code>.
+      </span>
+      </pre>
+            </code>
+            <hr />
+          </details>
+        </section>
+        <section>
+          <details>
+            <summary><h2>Objetos Literales</h2></summary>
+            <h3>¿Qué son los Objetos Literales?</h3>
+            <p>
+              Los objetos literales son una forma sencilla de crear objetos en
+              JavaScript. Se definen utilizando llaves <code>{}</code> y se
+              componen de pares clave-valor.
+            </p>
+            <hr />
+
+            <h3>Definición de un Objeto Literal</h3>
+            <p>
+              Un objeto literal es una estructura que contiene propiedades
+              (clave-valor) y métodos (funciones dentro del objeto).
+            </p>
+            <p style="color: brown">EJEMPLO</p>
+            <code style="color: green">
+              <pre>
+      const persona = {
+        nombre: "María",
+        edad: 28,
+        pais: "España",
+        saludar: function() {
+          console.log("Hola, soy " + this.nombre);
+        }
+      };
+
+      console.log(persona.nombre); // María
+      console.log(persona.edad); // 28
+      persona.saludar(); // Hola, soy María
+      <span style="color: gray;">
+        <= Este ejemplo define un objeto literal <code>persona</code> con tres propiedades (<code>nombre</code>, <code>edad</code>, <code>pais</code>) y un método (<code>saludar</code>).
+      </span>
+      </pre>
+            </code>
+            <hr />
+
+            <h3>Creación Dinámica de Propiedades</h3>
+            <p>
+              En los objetos literales, puedes asignar propiedades dinámicamente
+              utilizando variables o expresiones.
+            </p>
+            <p style="color: brown">EJEMPLO</p>
+            <code style="color: green">
+              <pre>
+      const propiedad = "edad";
+      const persona = {
+        nombre: "Carlos",
+        [propiedad]: 35
+      };
+
+      console.log(persona.nombre); // Carlos
+      console.log(persona.edad); // 35
+      <span style="color: gray;">
+        <= En este ejemplo, se utiliza una variable (<code>propiedad</code>) para asignar dinámicamente una propiedad al objeto <code>persona</code>.
+      </span>
+      </pre>
+            </code>
+            <hr />
+
+            <h3>Sintaxis Mejorada para Métodos</h3>
+            <p>
+              En los objetos literales, puedes definir métodos utilizando una
+              sintaxis simplificada.
+            </p>
+            <p style="color: brown">EJEMPLO</p>
+            <code style="color: green">
+              <pre>
+      const calculadora = {
+        sumar(a, b) {
+          return a + b;
+        },
+        restar(a, b) {
+          return a - b;
+        }
+      };
+
+      console.log(calculadora.sumar(5, 3)); // 8
+      console.log(calculadora.restar(5, 3)); // 2
+      <span style="color: gray;">
+        <= Este ejemplo muestra cómo definir métodos en un objeto literal usando una sintaxis más concisa.
+      </span>
+      </pre>
+            </code>
+            <hr />
+          </details>
+        </section>
+
+        <section>
+          <details>
+            <summary><h2>Parámetros REST y Operador Spread</h2></summary>
+
+            <h3>¿Qué son los Parámetros REST?</h3>
+            <p>
+              Los parámetros REST permiten a las funciones aceptar un número
+              indefinido de argumentos como un array. Se definen utilizando tres
+              puntos consecutivos (<code>...</code>) antes del nombre del
+              parámetro.
+            </p>
+            <p style="color: brown">EJEMPLO</p>
+            <code style="color: green">
+              <pre>
+      function sumar(...numeros) {
+        return numeros.reduce((acumulador, actual) => acumulador + actual, 0);
+      }
+
+      console.log(sumar(1, 2, 3, 4, 5)); // 15
+      console.log(sumar(10, 20)); // 30
+      <span style="color: gray;">
+        <= Este ejemplo utiliza parámetros REST (<code>...numeros</code>) para recibir múltiples argumentos en forma de array y sumar sus valores.
+      </span>
+      </pre>
+            </code>
+            <hr />
+
+            <h3>¿Qué es el Operador Spread?</h3>
+            <p>
+              El operador spread (<code>...</code>) se utiliza para expandir
+              elementos de un array, objeto u otro iterable en lugares donde se
+              esperan argumentos o elementos individuales.
+            </p>
+            <p style="color: brown">EJEMPLO</p>
+            <code style="color: green">
+              <pre>
+      const numeros = [1, 2, 3];
+      console.log(Math.max(...numeros)); // 3
+
+      const copiaNumeros = [...numeros, 4, 5];
+      console.log(copiaNumeros); // [1, 2, 3, 4, 5]
+      <span style="color: gray;">
+        <= Este ejemplo usa el operador spread para pasar los valores del array <code>numeros</code> como argumentos individuales a <code>Math.max</code>, y para crear una copia con nuevos elementos.
+      </span>
+      </pre>
+            </code>
+            <hr />
+
+            <h3>Combinar REST y Spread</h3>
+            <p>
+              Puedes usar ambos conceptos juntos para trabajar con argumentos
+              dinámicos y expandir colecciones en JavaScript.
+            </p>
+            <p style="color: brown">EJEMPLO</p>
+            <code style="color: green">
+              <pre>
+      function mezclarArrays(array1, ...otrosElementos) {
+        return [...array1, ...otrosElementos];
+      }
+
+      const resultado = mezclarArrays([1, 2, 3], 4, 5, 6);
+      console.log(resultado); // [1, 2, 3, 4, 5, 6]
+      <span style="color: gray;">
+        <= Este ejemplo combina un array con elementos adicionales utilizando el operador spread y parámetros REST.
+      </span>
+      </pre>
+            </code>
+            <hr />
+          </details>
+        </section>
+
+        <section>
+          <details>
+            <summary><h2>Arrow Functions</h2></summary>
+
+            <h3>¿Qué son las Arrow Functions?</h3>
+            <p>
+              Las <strong>Arrow Functions</strong> son una forma concisa de
+              definir funciones en JavaScript. Se introdujeron en ES6 y ofrecen
+              una sintaxis más corta que las funciones tradicionales, además de
+              no tener su propio contexto <code>this</code>.
+            </p>
+            <p style="color: brown">SINTAXIS</p>
+            <code style="color: green">
+              <pre>
+      // Función tradicional
+      function sumar(a, b) {
+        return a + b;
+      }
+
+      // Arrow Function
+      const sumar = (a, b) => a + b;
+      </pre
+              >
+            </code>
+            <hr />
+
+            <h3>Ventajas de las Arrow Functions</h3>
+            <ul>
+              <li>Sintaxis más corta y limpia.</li>
+              <li>
+                No tienen su propio <code>this</code>, por lo que heredan el
+                contexto del entorno donde se definen.
+              </li>
+            </ul>
+
+            <h3>Ejemplos Prácticos</h3>
+            <p style="color: brown">
+              EJEMPLO 1: Función con múltiples argumentos
+            </p>
+            <code style="color: green">
+              <pre>
+      const multiplicar = (a, b) => a * b;
+      console.log(multiplicar(5, 3)); // 15
+      <span style="color: gray;">
+        <= Este ejemplo define una Arrow Function que toma dos parámetros y devuelve su producto.
+      </span>
+      </pre>
+            </code>
+            <hr />
+
+            <p style="color: brown">EJEMPLO 2: Función con un solo argumento</p>
+            <code style="color: green">
+              <pre>
+      const cuadrado = x => x * x;
+      console.log(cuadrado(4)); // 16
+      <span style="color: gray;">
+        <= Cuando hay un solo argumento, los paréntesis son opcionales.
+      </span>
+      </pre>
+            </code>
+            <hr />
+
+            <p style="color: brown">EJEMPLO 3: Función sin argumentos</p>
+            <code style="color: green">
+              <pre>
+      const saludar = () => "Hola, mundo!";
+      console.log(saludar()); // "Hola, mundo!"
+      <span style="color: gray;">
+        <= Si no hay argumentos, se usan paréntesis vacíos.
+      </span>
+      </pre>
+            </code>
+            <hr />
+
+            <p style="color: brown">EJEMPLO 4: Uso con métodos de arrays</p>
+            <code style="color: green">
+              <pre>
+      const numeros = [1, 2, 3, 4, 5];
+      const cuadrados = numeros.map(n => n * n);
+      console.log(cuadrados); // [1, 4, 9, 16, 25]
+      <span style="color: gray;">
+        <= Este ejemplo utiliza una Arrow Function como callback en el método <code>map</code>.
+      </span>
+      </pre>
+            </code>
+            <hr />
+
+            <h3>Cuándo No Usar Arrow Functions</h3>
+            <p>
+              Las Arrow Functions no son adecuadas cuando necesitas una función
+              con su propio contexto <code>this</code>, por ejemplo, en métodos
+              de objetos o constructores.
+            </p>
+            <p style="color: brown">EJEMPLO</p>
+            <code style="color: green">
+              <pre>
+      const objeto = {
+        valor: 10,
+        metodo: function() {
+          return () => this.valor;
+        }
+      };
+      console.log(objeto.metodo()()); // 10
+      <span style="color: gray;">
+        <= Aquí, el contexto <code>this</code> de la Arrow Function se hereda del método del objeto.
+      </span>
+      </pre>
+            </code>
+            <hr />
+          </details>
+        </section>
+
+        <section>
+          <details>
+            <summary><h2>Prototipos en JavaScript</h2></summary>
+            <p>
+              Los <strong>prototipos</strong> son un mecanismo mediante el cual
+              los objetos en JavaScript pueden heredar propiedades y métodos de
+              otros objetos. Cada objeto en JavaScript tiene un prototipo, que
+              actúa como una plantilla de la que puede heredar métodos y
+              propiedades.
+            </p>
+
+            <h3>¿Cómo funcionan los prototipos?</h3>
+            <p>
+              En JavaScript, un prototipo es un objeto del cual otro objeto
+              hereda. Cuando intentas acceder a una propiedad o método en un
+              objeto, el motor de JavaScript primero busca esa propiedad en el
+              propio objeto. Si no la encuentra, busca en el prototipo del
+              objeto, y así sucesivamente hasta llegar al prototipo base (o
+              <code>Object.prototype</code>).
+            </p>
+            <p style="color: brown">EJEMPLO</p>
+            <code style="color: green">
+              <pre>
+      function Persona(nombre, edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+      }
+
+      // Agregamos un método al prototipo
+      Persona.prototype.saludar = function() {
+        console.log("Hola, me llamo " + this.nombre);
+      };
+
+      // Crear una instancia
+      const persona1 = new Persona("Juan", 25);
+      persona1.saludar(); // "Hola, me llamo Juan"
+
+      <span style="color: gray;">
+        <= Aquí, el método <code>saludar</code> no está directamente en <code>persona1</code>, sino en su prototipo (<code>Persona.prototype</code>).
+      </span>
+      </pre>
+            </code>
+            <hr />
+
+            <h3>Cadena de Prototipos (Prototype Chain)</h3>
+            <p>
+              La cadena de prototipos es la estructura jerárquica en la que un
+              objeto puede heredar de otro, y este, a su vez, puede heredar de
+              otro más. Si una propiedad o método no se encuentra en el objeto,
+              se buscará en su prototipo, luego en el prototipo del prototipo, y
+              así sucesivamente.
+            </p>
+            <p style="color: brown">EJEMPLO</p>
+            <code style="color: green">
+              <pre>
+      console.log(persona1.toString()); // Llama al método heredado de Object.prototype
+
+      <span style="color: gray;">
+        <= Aunque no definimos el método <code>toString</code> en <code>Persona</code>, este se encuentra en <code>Object.prototype</code>.
+      </span>
+      </pre>
+            </code>
+            <hr />
+
+            <h3>Creación de Objetos con Object.create</h3>
+            <p>
+              También puedes crear objetos directamente con un prototipo
+              específico usando <code>Object.create</code>.
+            </p>
+            <p style="color: brown">EJEMPLO</p>
+            <code style="color: green">
+              <pre>
+      const animal = {
+        caminar: function() {
+          console.log("El animal está caminando");
+        }
+      };
+
+      const perro = Object.create(animal);
+      perro.ladrar = function() {
+        console.log("Guau guau");
+      };
+
+      perro.caminar(); // "El animal está caminando"
+      perro.ladrar(); // "Guau guau"
+
+      <span style="color: gray;">
+        <= Aquí, <code>perro</code> hereda el método <code>caminar</code> del objeto <code>animal</code>.
+      </span>
+      </pre>
+            </code>
+            <hr />
+
+            <h3>Ventajas de los Prototipos</h3>
+            <ul>
+              <li>
+                Reutilización de código: Los métodos definidos en el prototipo
+                no se duplican para cada instancia.
+              </li>
+              <li>
+                Mayor eficiencia de memoria: Todas las instancias comparten los
+                mismos métodos y propiedades prototípicas.
+              </li>
+            </ul>
+
+            <h3>Notas importantes</h3>
+            <p>
+              Aunque los prototipos son fundamentales en JavaScript, es
+              importante recordar que la programación moderna tiende a usar la
+              sintaxis de clases (<code>class</code>), que encapsula los
+              prototipos detrás de una sintaxis más amigable.
+            </p>
+          </details>
+        </section>
+      </article>
+    </main>
+
+    <script>
+      let nombre = "jorn";
+      let apellido = "Mircha";
+      let saludo = new String("hola mundo");
+      console.log(nombre, apellido, saludo);
+      console.log(nombre.length, apellido.length, saludo.length);
+      console.log(nombre.toUpperCase());
+      console.log(apellido.toLowerCase());
+      console.log(saludo.includes("hola"));
+      console.log(saludo.includes("patrick"));
+      console.log(saludo.trim());
+      console.log(saludo.split(" "));
+      console.log("**********************");
+      let nombres = "Patrick";
+      let apellidos = "Alcantara";
+
+      //concatenacion
+      let saludos = "Hola mi nombre es" + nombres + "" + apellidos + ".";
+      console.log(saludos);
+
+      //interpolacion de variables
+      let nombre1 = `Hola mi nombre es ${nombres} ${apellidos}`;
+      console.log(nombre1);
+
+      //ver el codigo correctamente
+      let codigo = `
+      <ul>
+         <li>primaver</li>
+         <li>verano</li>
+         <li>otono</li>
+         <li>invierno</li>
+      </ul>`;
+      console.log(codigo);
+      console.log("*****************************");
+      let a = 1;
+      let b = new Number(2);
+      let c = 7.19;
+      let d = "5.6";
+      console.log(typeof c, typeof d);
+      console.log(a, b);
+      console.log(c.toFixed(5));
+      console.log(parseInt(c));
+      console.log(parseFloat(c));
+      console.log(a + b);
+      console.log(c + parseInt(d));
+      console.log(c + parseFloat(d));
+      console.log(c + Number.parseInt(d));
+      console.log(c + Number.parseFloat(d));
+      console.log("**********************************");
+      //Parte de boolean.............................
+      let verdadero = true;
+      let falso = false;
+      let v = Boolean(true);
+      let u = Boolean(false);
+
+      console.log(typeof v, typeof u);
+
+      console.log(verdadero, falso);
+      console.log(v, u);
+      console.log(Boolean(0));
+      console.log(Boolean(-7));
+      console.log(Boolean(""));
+      console.log(Boolean(" "));
+
+      console.log("********************************************");
+
+      //partede undefined,null y NaN.
+      let indefinida;
+      console.log(indefinida);
+
+      let nulo = null;
+      console.log(null);
+
+      let noEsUnNumero = "hola" * 3.7;
+      console.log(noEsUnNumero);
+
+      console.log("*************************************************");
+
+      //function
+
+      //funciones declaradas
+      function estoEsUnaFuncion() {
+        console.log("uno");
+        console.log("dos");
+        console.log("tres");
+      }
+
+      //Invocar la funcion
+      estoEsUnaFuncion();
+
+      //return
+      function unaFuncionQueDevuelveValor() {
+        console.log("uno");
+        console.log("dos");
+        console.log("tres");
+        return "La funcion ha retornadi de una cadena de texto";
+      }
+
+      let valorDeFuncion = unaFuncionQueDevuelveValor();
+      console.log(valorDeFuncion);
+
+      //parametros
+
+      function saludar(nombre, edad) {
+        console.log(`Hola mi nombre es ${nombre} y tengo ${edad} anos.`);
+      }
+
+      saludar("Patrick", 21);
+      saludar();
+
+      //Como funciona la funcion declarada.
+
+      funcionDeclarada();
+
+      function funcionDeclarada() {
+        console.log(
+          "Esto es una funcion declarada,puede invocarse en cualquier parte de nuestro codigo, incluso antes de que la funcion sea declarada."
+        );
+      }
+
+      funcionDeclarada();
+
+      //funcione anonimas
+      const funcionExpresada = function () {
+        console.log(
+          "Ësto es una funcion expresada, es decir, una funcion que se le ha asignado como valor a una variable, si invocamos esta funcion antes de su definicion JS nos dira `Cannot access 'funcionExpresada' defore initialization.`"
+        );
+      };
+      funcionExpresada();
+
+      console.log("*****************************************************");
+
+      //arrays
+      const z = [];
+      const y = [1, true, "Hola", ["A", "B", "C", [1, 2, 3]]];
+
+      console.log(z);
+      console.log(y);
+
+      console.log(y[2]);
+      console.log(y[0]);
+      console.log(y[3]);
+
+      console.log(y[3][2]);
+      console.log(y[3][3][0]);
+
+      const x = Array.of("x", "y", "z", 9, 8, 7);
+      console.log(x);
+
+      const w = Array(40).fill(true);
+      console.log(w);
+
+      const colores = ["rojo", "verde", "azul"];
+      console.log(colores);
+
+      colores.push("Negro");
+      console.log(colores);
+
+      colores.pop();
+      console.log(colores);
+
+      console.log("****************************************");
+
+      const j = {};
+      console.log(j);
+
+      const k = new Object();
+      console.log(k);
+
+      const jesus = {
+        nombre: "jesus",
+        apellido: "esquives",
+        edad: 35,
+        pasatiempos: ["corre", "hacer ejercicio", "dar clases"],
+        soltero: true,
+        contacto: {
+          gmail: "patrickcomeresbueno@gmail.com",
+          movil: "934008679",
+          twitter: "apotheddy",
+        },
+
+        saludar: function () {
+          console.log(`hola :)`);
+        },
+
+        decirMiNombre: function () {
+          console.log(
+            `Hola me llamo ${this.nombre} ${this.apellido} y tengo ${this.edad} anos y me puedes seguir como ${this.contacto.twitter}`
+          );
+        },
+      };
+
+      console.log(jesus);
+      console.log(jesus["nombre"]);
+      console.log(jesus["apellido"]);
+      console.log(jesus.nombre);
+      console.log(jesus.apellido);
+      console.log(jesus.edad);
+      console.log(jesus.soltero);
+      console.log(jesus.pasatiempos);
+      console.log(jesus.pasatiempos[1]);
+      console.log(jesus.contacto);
+      console.log(jesus.contacto.gmail);
+      jesus.saludar();
+      jesus.decirMiNombre();
+
+      console.log(Object.keys(jesus));
+      console.log(Object.values(jesus));
+      console.log(jesus.hasOwnProperty("nombre"));
+      console.log(jesus.hasOwnProperty("nacimiento"));
+
+      console.log("**********************************************************");
+
+      let l = 5 + (5 - 5) * 3;
+      let division = 5 / 2;
+      let modulo = 5 % 2;
+
+      console.log(l);
+      console.log(division);
+      console.log(modulo);
+    </script>
+  </body>
+</html>
